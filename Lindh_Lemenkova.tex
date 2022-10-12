@@ -5,36 +5,13 @@
 \documentclass[Electronics,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
 % For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal and change "submit" to "accept". The document class line would be, e.g., \documentclass[preprints,article,accept,moreauthors,pdftex]{mdpi}. This is especially recommended for submission to arXiv, where line numbers should be removed before posting. For preprints.org, the editorial staff will make this change immediately prior to posting.
 
-%--------------------
-% Class Options:
-%--------------------
-%----------
-% journal
-%----------
-% Choose between the following MDPI journals:
-% acoustics, actuators, addictions, admsci, adolescents, aerospace, agriculture, agriengineering, agronomy, ai, algorithms, allergies, alloys, analytica, animals, antibiotics, antibodies, antioxidants, applbiosci, appliedchem, appliedmath, applmech, applmicrobiol, applnano, applsci, aquacj, architecture, arts, asc, asi, astronomy, atmosphere, atoms, audiolres, automation, axioms, bacteria, batteries, bdcc, behavsci, beverages, biochem, bioengineering, biologics, biology, biomass, biomechanics, biomed, biomedicines, biomedinformatics, biomimetics, biomolecules, biophysica, biosensors, biotech, birds, bloods, blsf, brainsci, breath, buildings, businesses, cancers, carbon, cardiogenetics, catalysts, cells, ceramics, challenges, chemengineering, chemistry, chemosensors, chemproc, children, chips, cimb, civileng, cleantechnol, climate, clinpract, clockssleep, cmd, coasts, coatings, colloids, colorants, commodities, compounds, computation, computers, condensedmatter, conservation, constrmater, cosmetics, covid, crops, cryptography, crystals, csmf, ctn, curroncol, currophthalmol, cyber, dairy, data, dentistry, dermato, dermatopathology, designs, diabetology, diagnostics, dietetics, digital, disabilities, diseases, diversity, dna, drones, dynamics, earth, ebj, ecologies, econometrics, economies, education, ejihpe, electricity, electrochem, electronicmat, electronics, encyclopedia, endocrines, energies, eng, engproc, ent, entomology, entropy, environments, environsciproc, epidemiologia, epigenomes, est, fermentation, fibers, fintech, fire, fishes, fluids, foods, forecasting, forensicsci, forests, foundations, fractalfract, fuels, futureinternet, futureparasites, futurepharmacol, futurephys, futuretransp, galaxies, games, gases, gastroent, gastrointestdisord, gels, genealogy, genes, geographies, geohazards, geomatics, geosciences, geotechnics, geriatrics, hazardousmatters, healthcare, hearts, hemato, heritage, highthroughput, histories, horticulturae, humanities, humans, hydrobiology, hydrogen, hydrology, hygiene, idr, ijerph, ijfs, ijgi, ijms, ijns, ijtm, ijtpp, immuno, informatics, information, infrastructures, inorganics, insects, instruments, inventions, iot, j, jal, jcdd, jcm, jcp, jcs, jdb, jeta, jfb, jfmk, jimaging, jintelligence, jlpea, jmmp, jmp, jmse, jne, jnt, jof, joitmc, jor, journalmedia, jox, jpm, jrfm, jsan, jtaer, jzbg, kidney, kidneydial, knowledge, land, languages, laws, life, liquids, literature, livers, logics, logistics, lubricants, lymphatics, machines, macromol, magnetism, magnetochemistry, make, marinedrugs, materials, materproc, mathematics, mca, measurements, medicina, medicines, medsci, membranes, merits, metabolites, metals, meteorology, methane, metrology, micro, microarrays, microbiolres, micromachines, microorganisms, microplastics, minerals, mining, modelling, molbank, molecules, mps, msf, mti, muscles, nanoenergyadv, nanomanufacturing, nanomaterials, ncrna, network, neuroglia, neurolint, neurosci, nitrogen, notspecified, nri, nursrep, nutraceuticals, nutrients, obesities, oceans, ohbm, onco, oncopathology, optics, oral, organics, organoids, osteology, oxygen, parasites, parasitologia, particles, pathogens, pathophysiology, pediatrrep, pharmaceuticals, pharmaceutics, pharmacoepidemiology, pharmacy, philosophies, photochem, photonics, phycology, physchem, physics, physiologia, plants, plasma, pollutants, polymers, polysaccharides, poultry, powders, preprints, proceedings, processes, prosthesis, proteomes, psf, psych, psychiatryint, psychoactives, publications, quantumrep, quaternary, qubs, radiation, reactions, recycling, regeneration, religions, remotesensing, reports, reprodmed, resources, rheumato, risks, robotics, ruminants, safety, sci, scipharm, seeds, sensors, separations, sexes, signals, sinusitis, skins, smartcities, sna, societies, socsci, software, soilsystems, solar, solids, sports, standards, stats, stresses, surfaces, surgeries, suschem, sustainability, symmetry, synbio, systems, taxonomy, technologies, telecom, test, textiles, thalassrep, thermo, tomography, tourismhosp, toxics, toxins, transplantology, transportation, traumacare, traumas, tropicalmed, universe, urbansci, uro, vaccines, vehicles, venereology, vetsci, vibration, viruses, vision, waste, water, wem, wevj, wind, women, world, youth, zoonoticdis 
-
-%---------
-% article
-%---------
-% The default type of manuscript is "article", but can be replaced by: 
-% abstract, addendum, article, book, bookreview, briefreport, casereport, comment, commentary, communication, conferenceproceedings, correction, conferencereport, entry, expressionofconcern, extendedabstract, datadescriptor, editorial, essay, erratum, hypothesis, interestingimage, obituary, opinion, projectreport, reply, retraction, review, perspective, protocol, shortnote, studyprotocol, systematicreview, supfile, technicalnote, viewpoint, guidelines, registeredreport, tutorial
-% supfile = supplementary materials
-
-%----------
-% submit
-%----------
-% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g., the logo of the journal will get visible), the headings, and the copyright information. Also, line numbering will be removed. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
-
-%------------------
-% moreauthors
-%------------------
-% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
-
-%---------
-% pdftex
-%---------
-% The option pdftex is for use with pdfLaTeX. If eps figures are used, remove the option pdftex and use LaTeX and dvi2pdf.
+\graphicspath{{figures/}} % path to folder with figures
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{gensymb} % for degree symbol
+\usepackage[super]{nth}
 
 %=================================================================
 % MDPI internal commands
@@ -146,7 +123,7 @@ $^{3}$ \quad Universit\'{e} Libre de Bruxelles, \'{E}cole polytechnique de Bruxe
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-Cementitious materials have positive effects on developing of strength and hardening of clayey soil during stabilization. Cement is the most widely used traditional binder often used for soil stabilization [1–4]. Apart from cement, many other stabilizing agents are being added to binder blends. Replacing the cement by other materials aims to enhance technical performance of stabilization, increase the economic effectivity of the construction process through cheaper materials and reduce environmental impacts from CO2 discharges [5–7]. Besides, the effects from blends fabricated from various binders on soil are more durable and notable [8–10]. The stabilization of soil is owing to the ability of binders to decrease the space between the pores in soil through bonding of particles during the period of curing [9–10]. The decrease of volume in the pores of soil develops over the time of curing and results in the decreased porosity and permeability of soil [8–10]. Thus, cementitious binders increase the compactness and strength of soil, which finally increases its workability and bearing capacity, – the key requirements for soil quality in road construction.	
+Cementitious materials have positive effects on developing of strength and hardening of clayey soil during stabilization. Cement is the most widely used traditional binder often used for soil stabilization [1–4]. Apart from cement, many other stabilizing agents are being added to binder blends. Replacing the cement by other materials aims to enhance technical performance of stabilization, increase the economic effectivity of the construction process through cheaper materials and reduce environmental impacts from $CO_2$ discharges [5–7]. Besides, the effects from blends fabricated from various binders on soil are more durable and notable [8–10]. The stabilization of soil is owing to the ability of binders to decrease the space between the pores in soil through bonding of particles during the period of curing [9–10]. The decrease of volume in the pores of soil develops over the time of curing and results in the decreased porosity and permeability of soil [8–10]. Thus, cementitious binders increase the compactness and strength of soil, which finally increases its workability and bearing capacity, – the key requirements for soil quality in road construction.	
 
 Many various binders make notable beneficial effects on the development of strength in binder-soil blends in the process of stabilization. For instance, adding slaked lime and steel slag increases Uniaxial Compressive Strength (UCS) of soil, as reported in many studies [11–13]. As for the impact from the mixtures of binders on soil compactness, earlier works shown their positive effects on various types of soil intended for construction of roads [14–16]. Ground Granulated Blast Furnace Slag (GGBS) is a steel waste with pozzolanic properties, received as an industrial by-product from the steelmaking process [17]. 
 
@@ -160,7 +137,7 @@ The existing literature and case studies on soil stabilization tended to focus o
 
 Accurate and systematic evaluation of strength in soil stabilized by various binders using blended mixtures in various proportions are lacking, especially those focused on Swedish clayey tills, which are subject to harsh environmental and climate conditions. The objective of this study is a comparative analysis of the effects from various binders and their proportions on soil strength over a period of curing. Besides, the research on influence of binders on Moisture Condition Value (MCV) of soil need to be performed to show their effects with aim to soil improvement. The non-selective use of binders for any type of soil can result in the opposite effects, since as various types of binders are better adjusted to the various soil types, respectively. Therefore, the effects from diverse binders should be tested and evaluated separately using statistical approach for optimization of the workflow. To this end, we performed a series of statistical simplex tests to define the best relationships of soil-binder mixtures with regard to the strength of soil.
 
-The goal of this study was to determine the effects that stabilizing agents (ordinary Portland cement, slaked lime and slag GGBFS) have on the long-term strength gain in 3 types of soil measured on days 7, 28 and 90th. Besides, other geotechnical characteristics were tested for each type of soil stabilized by various binders, respectively: dry density, water content and MCV. In order to perform tests more effectively, we performed statistical optimization of these processes using existing experimental approaches [51–52]. The research has been carried out in the Swedish Geotechnical Institute (SGI) using the available tools and equipment. The methodology followed the existing standards on soil quality testing defined in technical guidances by the Swedish Institute for Standards (SIS). The dynamics in strength and changes of soil structure stabilized by various binders were examined by the UCS tests, moisture and compactness were monitored with Proctor compaction technique during curing period. The resulting changes were visualised, compared and assessed in series of statistical ternary plots, presented below in the article. The correlations between binders and strength in the stabilized soil mixture, the estimated UCS response surfaces for different recipes of soil-binder mixtures and the observed values were detected, plotted and evaluated.
+The goal of this study was to determine the effects that stabilizing agents (ordinary Portland cement, slaked lime and slag GGBFS have on the long-term strength gain in 3 types of soil measured on days 7, 28 and 90th. Besides, other geotechnical characteristics were tested for each type of soil stabilized by various binders, respectively: dry density, water content and MCV. In order to perform tests more effectively, we performed statistical optimization of these processes using existing experimental approaches [51–52]. The research has been carried out in the Swedish Geotechnical Institute (SGI) using the available tools and equipment. The methodology followed the existing standards on soil quality testing defined in technical guidances by the Swedish Institute for Standards (SIS). The dynamics in strength and changes of soil structure stabilized by various binders were examined by the UCS tests, moisture and compactness were monitored with Proctor compaction technique during curing period. The resulting changes were visualised, compared and assessed in series of statistical ternary plots, presented below in the article. The correlations between binders and strength in the stabilized soil mixture, the estimated UCS response surfaces for different recipes of soil-binder mixtures and the observed values were detected, plotted and evaluated.
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
@@ -220,6 +197,8 @@ H_1: \mu _i \neq \mu _j
 \end{equation}
 for at least one pair of $(i, j)$.
 
+If $H_0$ is true, then all treatments have a common mean $\mu$ [52]. The p-level indicates the probability of rejecting the $H_0$ when it is actually true. The $H_0$ was statistically tested and rejected at a significance level (p=0.05). 
+
 \section{Results and Discussion}
 Results demonstrate a series of plotted ternary plots showing response surfaces for UCS and MCV (Figs. 5 to 8). The circles on the borders of these figures signify a mixture of single binder, binary blend or a complex mixture. The results of the MCV tests are presented for soil types A and B in Fig. 5. Straight lines representing the contours signify no interaction between the binders as independent variables. In other words, no 2nd-order term is significant (equations 1 and 2 for linear and quadratic models). Response surfaces in Figures 5 to 8 is show the effects from binders on soil stabilization. 
 
@@ -234,89 +213,69 @@ The total amount is adjusted for 100\%, that is, boundary conditions satisfy to 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 
-Authors should discuss the results and how they can be interpreted from the perspective of previous studies and of the working hypotheses. The findings and their implications should be discussed in the broadest context possible. Future research directions may also be highlighted.
+The strength properties of soil types A and B (sandy silty tills), and C (clay till) were evaluated using selected blended binders taken as pure agents and in mixes. We tested ordinary Portland cement (OPC), ground granulated blast furnace slag (GGBFS) and a slaked lime and their blended mixtures to evaluate the Uniaxial Compressive Strength (UCS) and Moisture Condition Value (MCV) in treated soil, examined the mineral structural and content properties of the soil using X-ray diffraction (XRD) and preliminary sieve and assessed the water content. The tests were intended to improving the properties of soil prior to road construction. The obtained results led to the following conclusions:
+
+\begin{enumerate}
+   \item The strength increase is comparable for most of the tested binders with notable effects from cement which works rapidly and results in quick soil stabilization.
+   \item The UCS increase in soil stabilized by OPC-lime blend is similar to that of GGBFS. However, a binder containing GGBFS gives lower values.  
+   \item The measurements on day \nth{7} of curing show that the mixture of GGBFS and slaked lime performs similar to the pure slaked lime. However,  after a curing period of 90 days there is a notable benefit for soil strength from the GGBFS-lime blend. 
+   \item The specimens stabilized with GGBFS show the lowest UCS after \nth{7} day of curing time. However, on \nth{28} day of curing they perform similar to those stabilized by lime.
+   \item Low increase in UCS for the lime-stabilized specimens is explained by low clay content in soil type A. slaked lime performs better as a binder, compared to others, and has a stronger response in soil type B compared to type A.
+   \item The GGBFS-lime blend demonstrated benefit on UCS of soil and performs approximately in similar way as OPC for soil strength after \nth{90} day of curing.	
+   \item A lower limit for clay content in soil should be ca. 10\% for lime binder to be effective.
+   \item We did not find a significant variations in effects from blending the three binders with regard to reduce the soil compaction, as reflected in the MCV values
+ \end{enumerate}
+
+	This article demonstrated the effects from single binders (cement/lime/steel slag) and their blended mixes on various types of clayey soils collected in southern Sweden. Although traditional methods of soil stabilization widely apply OPC or slaked lime as stabilising agents, the increase in using blended binders is notably recently. This is caused by the improved properties of such mixtures. As a result, blending OPC with GGBFS or OPC with pozzolanic materials, such as fly ash, has gained attention in civil engineering works. The vibratory compaction method that we applied in this experiment results in similar dry density values of soil if compared to the specimens compacted by MCA. Therefore, it could be possible to achieve these values in-situ, as the maximum MCV was lower that 14.
+	We noted positive effects from the blends GGBFS/lime on UCS gain in soils type A and B. Moreover, the GGBFS/lime mixed binder performs better compared to pure GGBFS or lime. In soil type B, the blend of GGBFS and slaked lime even outperforms pure OPC, owing to the fact that blend of GGBFS/lime does not affect compatibility of soil as a OPC binder, inasmuch as all the specimens were produced with the identical compaction approach. Second, clay content in soil type B is enough to produce maximum reaction products, while in soil type A, it is too low to match the reaction products produced by OPC binder.
+	The main aim of blending stabilizing agents is to increase the economic effectivity of workflow, following by environmental goals of utilization of waste material, and experimental producing of a new binder with better properties for technical reasons. Nonetheless, blending binders does not mechanically leads to the improved properties of stabilizing agent. Instead, the opposite reaction may be as the result depending on various factors, including soil grain size, or temperature among the others. Therefore, mixed binders were tested in this study, to ensure that they perform better than single binders for a particular soil from southern Sweden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
 
-This section is not mandatory, but can be added to the manuscript if the discussion is unusually long or complex.
+Technical implementation of soil stabilization and compaction is very expensive. At the same time, such works are an absolute requirement prior to all construction projects, including construction of buildings, foundations, infrastructure, tunnels, roads, railways and highways, and associated transport infrastructure. Indeed, soil quality is one of the crucial factors in civil engineering which ensures safety and workability of constructed objects. Therefore, selecting advanced, robust, reliable and optimized methods for soil compaction and stabilization are essential for industrial purposes, as compaction and UCS are perfect indicators of soil quality, achieved through successfully performed stabilization.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Patents}
+Advanced statistical techniques need to be used to optimise the ratio of binders aimed at determining the effects of their blended mixtures. Here we presented a series of simplex tests used to visualize and plot the effects from stabilizing agents on clayey soil. This test is beneficial for testing one amount is tested per time for determining the exact amount of single binders to be added. For more complex cases, it is recommended to perform several ternary plots for estimation of various amounts of binders, as independent statistical variables. However, in this case, the total amount of runs requires much greater trials which results in a more complicated of assessment soil strength stabilized by various from binders. 
 
-This section is not mandatory, but may be added if there are patents resulting from the work reported in this manuscript.
+Correctly selected binders, adjusted to the specific type of soil, result in a better stabilised soil that performs well. Moreover, well-adjusted techniques can significantly improve time-consuming workflow time and reduce economic costs of project implementation. For example, in the demonstrated study using pure OPC for stabilization of soil types A and B resulted in the best effects on MCV. Soil stabilized by the OPC needs a higher compaction energy due to the much higher their stiffness. 
+	
+The limitations of the presented work include the scope of the research, which is limited to the values received in the laboratory. Therefore, we cannot directly compare the results of the tested soil with those received on soil tested in real field in-situ conditions. At the same time, real conditions may affect soil response due to the regional and local properties and environmental-climate setting. As a result, this may lead to the variations in physico-chemical parameters of soil and mixing conditions. As a recommendation for future similar works, testing different various types of blends (proportions of binders within the blends) and different amounts of binders (in absolute mass, kg) would be beneficial. The improvement of soil compaction in situ should ideally include investigation of responses from compacted soil and the soil underneath on compaction. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{6pt} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% optional
-%\supplementary{The following supporting information can be downloaded at:  \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title.}
+\authorcontributions{For research articles with several authors, a short paragraph specifying their individual contributions must be provided. Conceptualization, methodology, software, validation, visualization, supervision -- Per Lindh; formal analysis, investigation, resources, data curation, project administration, funding acquisition -- Polina Lemenkova; writing---original draft preparation, Polina Lemenkova ; writing---review and editing, Per Lindh and Polina Lemenkova. All authors have read and agreed to the published version of the manuscript.}
 
-% Only for the journal Methods and Protocols:
-% If you wish to submit a video article, please do so with any other supplementary material.
-% \supplementary{The following supporting information can be downloaded at: \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title. A supporting video article is available at doi: link.}
+\funding{This research was funded by Electronics Editorial Office, MDPI, providing 100\% discount for APC for publication of this manuscript.}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\authorcontributions{For research articles with several authors, a short paragraph specifying their individual contributions must be provided. The following statements should be used ``Conceptualization, X.X. and Y.Y.; methodology, X.X.; software, X.X.; validation, X.X., Y.Y. and Z.Z.; formal analysis, X.X.; investigation, X.X.; resources, X.X.; data curation, X.X.; writing---original draft preparation, X.X.; writing---review and editing, X.X.; visualization, X.X.; supervision, X.X.; project administration, X.X.; funding acquisition, Y.Y. All authors have read and agreed to the published version of the manuscript.'', please turn to the  \href{http://img.mdpi.org/data/contributor-role-instruction.pdf}{CRediT taxonomy} for the term explanation. Authorship must be limited to those who have contributed substantially to the work~reported.}
+\institutionalreview{Not applicable}
 
-\funding{Please add: ``This research received no external funding'' or ``This research was funded by NAME OF FUNDER grant number XXX.'' and  and ``The APC was funded by XXX''. Check carefully that the details given are accurate and use the standard spelling of funding agency names at \url{https://search.crossref.org/funding}, any errors may affect your future funding.}
+\informedconsent{Not applicable}
 
-\institutionalreview{In this section, you should add the Institutional Review Board Statement and approval number, if relevant to your study. You might choose to exclude this statement if the study did not require ethical approval. Please note that the Editorial Office might ask you for further information. Please add “The study was conducted in accordance with the Declaration of Helsinki, and approved by the Institutional Review Board (or Ethics Committee) of NAME OF INSTITUTE (protocol code XXX and date of approval).” for studies involving humans. OR “The animal study protocol was approved by the Institutional Review Board (or Ethics Committee) of NAME OF INSTITUTE (protocol code XXX and date of approval).” for studies involving animals. OR “Ethical review and approval were waived for this study due to REASON (please provide a detailed justification).” OR “Not applicable” for studies not involving humans or animals.}
+\dataavailability{Not applicable} 
 
-\informedconsent{Any research article describing a study involving humans should contain this statement. Please add ``Informed consent was obtained from all subjects involved in the study.'' OR ``Patient consent was waived due to REASON (please provide a detailed justification).'' OR ``Not applicable'' for studies not involving humans. You might also choose to exclude this statement if the study did not involve humans.
+\acknowledgments{We thank the two anonymous reviewers for comments and reading of this manuscript. The study was supported by the NUTEK – Swedish Agency for Economic \& Regional Growth, Peab AB construction and civil engineering enterprise and Merox. We thank Cementa (HeidelbergCement Group Northern Europe) for provided cement binder, and Nordkalk for limestone binder. The authors acknowledge the help from colleagues from the Lund University, Chalmers Institute of Technology and the Swedish Geotechnical Institute with laboratory assistance and advices regarding the experimental tests. }
 
-Written informed consent for publication must be obtained from participating patients who can be identified (including by the patients themselves). Please state ``Written informed consent has been obtained from the patient(s) to publish this paper'' if applicable.}
-
-\dataavailability{In this section, please provide details regarding where data supporting reported results can be found, including links to publicly archived datasets analyzed or generated during the study. Please refer to suggested Data Availability Statements in section ``MDPI Research Data Policies'' at \url{https://www.mdpi.com/ethics}. If the study did not report any data, you might add ``Not applicable'' here.} 
-
-\acknowledgments{In this section you can acknowledge any support given which is not covered by the author contribution or funding sections. This may include administrative and technical support, or donations in kind (e.g., materials used for experiments).}
-
-\conflictsofinterest{Declare conflicts of interest or state ``The authors declare no conflict of interest.'' Authors must identify and declare any personal circumstances or interest that may be perceived as inappropriately influencing the representation or interpretation of reported research results. Any role of the funders in the design of the study; in the collection, analyses or interpretation of data; in the writing of the manuscript; or in the decision to publish the results must be declared in this section. If there is no role, please state ``The funders had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript; or in the decision to publish the~results''.} 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Optional
-\sampleavailability{Samples of the compounds ... are available from the authors.}
-
-%% Only for journal Encyclopedia
-%\entrylink{The Link to this entry published on the encyclopedia platform.}
+\conflictsofinterest{The authors declare no conflict of interest} 
 
 \abbreviations{Abbreviations}{
 The following abbreviations are used in this manuscript:\\
 
 \noindent 
 \begin{tabular}{@{}ll}
-MDPI & Multidisciplinary Digital Publishing Institute\\
-DOAJ & Directory of open access journals\\
-TLA & Three letter acronym\\
-LD & Linear dichroism
+ANOVA & Analysis of Variance \\
+GGBS & Ground Granulated Blast Furnace Slag \\
+MCV & Moisture Condition Value \\
+OMC & Optimum Moisture Content \\
+OPC & ordinary Portland cement \\
+SGI & Swedish Geotechnical Institute \\
+UCS & Uniaxial Compressive Strength \\ 
+WN & natural water content \\
+XRD & X-ray diffraction
 \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Optional
-\appendixtitles{no} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
-\appendixstart
-\appendix
-\section[\appendixname~\thesection]{}
-\subsection[\appendixname~\thesubsection]{}
-The appendix is an optional section that can contain details and data supplemental to the main text---for example, explanations of experimental details that would disrupt the flow of the main text but nonetheless remain crucial to understanding and reproducing the research shown; figures of replicates for experiments of which representative data are shown in the main text can be added here if brief, or as Supplementary Data. Mathematical proofs of results not central to the paper can be added as an appendix.
-
-\begin{table}[H] 
-\caption{This is a table caption.\label{tab5}}
-\newcolumntype{C}{>{\centering\arraybackslash}X}
-\begin{tabularx}{\textwidth}{CCC}
-\toprule
-\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}\\
-\midrule
-Entry 1		& Data			& Data\\
-Entry 2		& Data			& Data\\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\section[\appendixname~\thesection]{}
-All appendix sections must be cited in the main text. In the appendices, Figures, Tables, etc. should be labeled, starting with ``A''---e.g., Figure A1, Figure A2, etc.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{adjustwidth}{-\extralength}{0cm}
