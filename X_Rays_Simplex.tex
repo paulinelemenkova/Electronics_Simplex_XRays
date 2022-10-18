@@ -12,6 +12,10 @@
 \usepackage{graphicx}
 \usepackage{gensymb} % for degree symbol
 \usepackage[super]{nth}
+\usepackage{color, colortbl}
+\definecolor{Goldenrod}{RGB}{255,228,181}
+\usepackage{tabularx}
+\usepackage{chemmacros}
 
 %=================================================================
 % MDPI internal commands
@@ -147,13 +151,68 @@ The goal of this study was to determine the effects that stabilizing agents (ord
 To evaluate the structural and physicochemical properties of the soil, we applied two types of tests: the Moisture Condition Value (MCV) for compaction characteristics of specimens; and the Uniaxial Compressive Strength (UCS). These two parameters were analysed to evaluated the compaction properties and gained strength of the stabilized soil.
 
 \subsection{Material characteristics}
-The soil specimens used in this study were fabricated from the raw material originated from three different trial pits in southern Sweden. The soil included different types A, B and C with varied physio-chemical characteristics, described as follows. The clay content of soil types A, B and C varied from 6 to 18\%. Based on the dominating size of the particles within tested specimens, soils of types A and C are sandy silty tills, while soil type B is clay till. Soil type A had the following characteristics: particle density $\rho _s =2.70 mg/m^3$ ; Optimum Moisture Content (OMC) according to the modified Proctor is 6.1\%; dry density $\rho _d = 2.26 Mg/m^3$; natural water content (WN) =9.8\%; Liquid limit measured by cone penetrometer (WL) is 19.3\%, plasticity index <10. Soil type B had the following characteristics: particle density $\rho _s = 2.71 mg/m^3$; OMC as modified Proctor – 9.2\%; dry density $\rho _d = 2.12 Mg/m^3$; natural water content (WN) =14.6\%; Liquid limit by cone penetrometer (WL) 23.9\%, plasticity index <11.9. Soil type C, included only measurements of the particle density and WN. Thus, particle density $\rho _s$ for soil type C was $2.67 mg/m^3$ and WN =13.0\%; plasticity index <10. The summary of the performed tests on soil types A, B and C is presented in Table 1. 
+The soil specimens used in this study were fabricated from the raw material originated from three different trial pits in southern Sweden. The soil included different types A, B and C with varied physio-chemical characteristics, described as follows. The clay content of soil types A, B and C varied from 6 to 18\%. Based on the dominating size of the particles within tested specimens, soils of types A and C are sandy silty tills, while soil type B is clay till. Soil type A had the following characteristics: particle density $\rho _s =2.70 mg/m^3$ ; Optimum Moisture Content (OMC) according to the modified Proctor is 6.1\%; dry density $\rho _d = 2.26 Mg/m^3$; natural water content (WN) =9.8\%; Liquid limit measured by cone penetrometer (WL) is 19.3\%, plasticity index <10. Soil type B had the following characteristics: particle density $\rho _s = 2.71 mg/m^3$; OMC as modified Proctor – 9.2\%; dry density $\rho _d = 2.12 Mg/m^3$; natural water content (WN) =14.6\%; Liquid limit by cone penetrometer (WL) 23.9\%, plasticity index <11.9. Soil type C, included only measurements of the particle density and WN. Thus, particle density $\rho _s$ for soil type C was $2.67 mg/m^3$ and WN =13.0\%; plasticity index <10. The summary of the performed tests on soil types A, B and C is presented in Table \ref{tab:1}. 
 
-We estimated the mineral composition and structure of the solid phases of soil types A, B and C using the difference in X-ray diffraction (XRD), to understand its response on addition of binders during stabilization process. The principle consists in the adsorption of binders during reactions with soil, and transport of the materials of stabilizing agents through pores of soil, which performs at interfaces of soil with various physico-chemical properties that are different for types A, B and C in soil components. Soil types A and B contained clay minerals in a mixed layer of smectite (montmorillonite) (Na,Ca)0.33(Al,Mg)2(Si4O10)(OH)2*nH2O, illite (K,H3O)(Al,Mg,Fe)2(Si,Al)4O10[(OH)2,(H2O)], kaolinite (Al2(OH)4Si2O5). Soil type C contains chlorite (ClO-2), illite (K,H3O)(Al,Mg,Fe)2(Si,Al)4O10[(OH)2,(H2O)] and kaolinite (Al2(OH)4Si2O5). 
+\begin{table}[H]
+\caption{Summary of the test on soil types A, B and C* stabilised by cement (OPC), lime and slag (GGBFS)}
+\small
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
+    \hline
+    	 \rowcolor{Goldenrod}
+        Soil type A & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ \hline
+        Recipe & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
+        OPC & 0.00 & 2.50 & 1.25 & 0.00 & 0.00 & 0.00 & 1.25 & 0.83 & 1.67 & 0.42 & 0.42 \\ \hline
+        Lime & 0.00 & 0.00 & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.83 & 0.42 & 0.42 & 1.67 \\ \hline
+        GGBFS & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.00 & 0.00 & 0.83 & 0.42 & 1.67 & 0.42 \\ \hline
+         \rowcolor{Goldenrod}
+        Soil type B & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ \hline
+        Recipe & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
+        OPC & 0.00 & 2.50 & 1.25 & 0.00 & 0.00 & 0.00 & 1.25 & 0.83 & 1.67 & 0.42 & 0.42 \\ \hline
+        Lime & 0.00 & 0.00 & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.83 & 0.42 & 0.42 & 1.67 \\ \hline
+        GGBFS & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.00 & 0.00 & 0.83 & 0.42 & 1.67 & 0.42 \\ \hline
+         \rowcolor{Goldenrod}
+        Soil type C & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ \hline
+        Recipe & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
+        OPC & 0.00 & 2.50 & 1.25 & 0.00 & 0.00 & 0.00 & 1.25 & – & – & – & – \\ \hline
+        Lime & 0.00 & 0.00 & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & – & – & – & – \\ \hline
+        GGBFS & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.00 & 0.00 & – & – & – & – \\ \hline
+    \end{tabular}
+    \label{tab:1}
+\end{table}
+
+Notation for Table \ref{tab:1}: Grain size distribution, particle density, natural water content and X-ray diffraction tests have been performed for all the soil types recipe 0. Optimum moisture content was tested for soil type A recipe 0 and type B recipes 0 and 1. Liquid limit was tested for soil types A and B, recipe 0. The UCS tests were performed on days 7 (soil types A and B, recipes 0 to 6, twice in each case), 28 (A: recipes 0 to 6, triple; B: all the recipes, twice; C: recipes 1 to 6, twice) and 90 (twice for all cases for A: all recipes; B: recipes 0 to 6; C: 0 to 7).
+
+We estimated the mineral composition and structure of the solid phases of soil types A, B and C using the difference in X-ray diffraction (XRD), to understand its response on addition of binders during stabilization process. The principle consists in the adsorption of binders during reactions with soil, and transport of the materials of stabilizing agents through pores of soil, which performs at interfaces of soil with various physico-chemical properties that are different for types A, B and C in soil components. Soil types A and B contained clay minerals in a mixed layer of smectite (montmorillonite) \ch{(Na,Ca)0.33(Al,Mg)2(Si4O10)(OH)2*nH2O}, illite \ch{(K,H3O)(Al,Mg,Fe)2(Si,Al)4O10[(OH)2,(H2O)]}, kaolinite \ch{Al2(OH)4Si2O5}. Soil type C contains chlorite \ch{ClO-2}, illite \ch{K,H3O)(Al,Mg,Fe)2}\\\ch{(Si,Al)4O10[(OH)2,(H2O)]} and kaolinite \ch{Al2(OH)4Si2O5}. 
 
 
 \subsection{Binders}
-Binders can be rated according to their effects on strength development in soil (Table 2). For example, the suggested binders for illite and kaolinite include sand, cement and lime. This explained the choice of lime and cement as binders for stabilization of soil type A and B. The chlorite component in soil type C well responds to treatment by cement, which is why the OPC was selected for soil type C. For these reasons, the following commercially available binders were used for soil treatment: ordinary Portland cement (OPC), ground granulated blast furnace slag (GGBFS) and a slaked lime. 
+Binders can be rated according to their effects on strength development in soil (Table \ref{tab:2}). For example, the suggested binders for illite and kaolinite include sand, cement and lime. This explained the choice of lime and cement as binders for stabilization of soil type A and B. The chlorite component in soil type C well responds to treatment by cement, which is why the OPC was selected for soil type C. For these reasons, the following commercially available binders were used for soil treatment: ordinary Portland cement (OPC), ground granulated blast furnace slag (GGBFS) and a slaked lime. 
+
+\begin{table}[!ht]
+\caption{Suitability of binders in road stabilisation to soil types (Unified Soil Classification System, USCS)}
+\small
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+     	\rowcolor{Goldenrod}
+        Stabilizing agent*** & G & GW & GM & S & CS & CH \\ \hline
+        A & ++ & ++ & ++ & + & + & – \\ \hline
+        B & ++ & ++ & ++ & ++ & ++ & + \\ \hline
+        C & ++ & ++ & ++ & ++ & ++ & – \\ \hline
+        D & + & + & ++ & – & + & ++ \\ \hline
+        C (CaO + GP cement) & – & – & + & – & + & ++ \\ \hline
+        C (CaO + GGBFS) & – & ++ & ++ & – & + & + \\ \hline
+        E & ++ & ++ & + & + & – & – \\ \hline
+        F & ++ & ++ & + & + & – & – \\ \hline
+        G & + & ++ & ++ & – & ++ & + \\ \hline
+    \end{tabular}
+    \label{tab:2}
+\end{table}
+
+Notations for Table \ref{tab:2}: Definitions of symbols, according to USCS: G: gravel (crushed rock); GW: well-graded gravel; GM: Silty/clayey gravel; S: sand; CS: Sandy/silty clays; CH: fat heavy clay.
+** Notations for suitability: ++ perfectly suitable; + satisfactory; – not suitable.
+***Symbols for binders: A – GP cement AS3972; B – GB cement AS3972; C – Cementitious blend of pozzolanic binders (fly ash + GP cement + GGBFS + CaO in triple and quaternary mixtures); D – slaked lime or calcium hydroxide (CaO); E – Asphalt / bitumen, standard AS2008; F – GP cement / asphalt; G – Insoluble polymers.
 
 The blends of standardized binders were used in blending operation, which was performed in a mixing with soil, according to standards of SGI for soil composition and recommended binders, and controlled through records used for ternary plots for UCS estimation. The we selected different types of binders for each type of soil, because these binders react differently with soil particles. The calculated difference in reaction products from 6 different binder recipes, which are as follows (in kg): 1) OPC (100); 2) OPC (50)+GGBFS (50); 3) GGBFS (100); 4) GGBFS (50) + lime (50); 5) lime (100); 6) lime (50) + OPC (50), Fig. \ref{fig:01}. The soil was treated with these binders or their blends. The total amount of binder used was set to 2.5\% of the soils' dry density, because it enables to obtain an expected maximum UCS of 5 MPa after a curing period of 3 months. A UCS of 5 MPa is a high value for soil stabilization, but was obtained using 2.5\% binder.
 
@@ -163,10 +222,28 @@ The blends of standardized binders were used in blending operation, which was pe
      \caption{The effects from OPC and lime on soil particles (10 g binder per 100 g dry soil)} \label{fig:01}
 \end{figure}
 
-All three soil types A, B and C contained material varying from clay to coarse sand particles and therefore could be treated with lime and cement. There are differences in the effects from various binders (Table 3). For instance, OPC quickly starts to react with soil particles just within 2 h after mixing with soil. Most of the reaction is finished in 2 months, Fig. \ref{fig:01}. In contrast, the effects from lime are more consequent and similar to a straight line. 
+All three soil types A, B and C contained material varying from clay to coarse sand particles and therefore could be treated with lime and cement. There are differences in the effects from various binders (Table \ref{tab:3}). For instance, OPC quickly starts to react with soil particles just within 2 h after mixing with soil. Most of the reaction is finished in 2 months, Fig. \ref{fig:01}. In contrast, the effects from lime are more consequent and similar to a straight line. 
+
+\begin{table}[H]
+\caption{Reaction on stabilisation from main soil compounds and suggested binders}
+    \centering
+    \begin{tabular*}{\textwidth}{c @{\extracolsep{\fill}} |l|l|l|}
+    \hline
+    \rowcolor{Goldenrod}
+        Soil component & Chemical formula & Binders \\ \hline
+        Organic matter & – & Mechanical \\ \hline
+        Sand & \ch{SiO2} & Clay loam; asphalt \\ \hline
+        Allophane & \ch{Al2O3·(SiO2)1.3-2·(2.5-3)H2O} & Lime (CaO) \\ \hline
+        Kaolinite & \ch{Al2(OH)4Si2O5} & Sand; cement; lime \\ \hline
+        Illite & \ch{K,H3O(Al,Mg,Fe)2(Si,Al)4O10[(OH)2,(H2O)} & Cement; lime \\ \hline
+        Montmorillonite & \ch{(Na,Ca)0.33(Al,Mg)2(Si4O10)(OH)2·nH2O} & Lime (CaO) \\ \hline
+    \end{tabular*}
+    \label{tab:3}
+\end{table}
+
+Argumentation for the use of these materials is as follows. Organic matter increases in soil compaction due to molecular bonds between the particles. Sand contributes to the increase of the mechanical stability, density, cohesion and gain in shear strength of soil. Allophane contributes to the increase of the pozzolanic strength, compaction and densification of soil. Kaolinite has effects on the mechanical stability of soil, contributes to the early strength and workability as well as later strength gain of soil. Illite adds early strength gain and increases the workability and early strength development in soil. Finally, the montmorillonite effects the workability and early strength gain of soil.
 
 To correspond between the long-term soil performance and workflow effectiveness in the geotechnical works, various manufacturers are producing specific binders with trade names. However, often the exact content and the proportions might not be available, which requires testing binders for soil stabilization. For example, lime and OPC mixed with clay produce reaction products after 18 months. However, lime-clay has more productivity compared to cement-clay with regard to reaction products, which is dependent on the temperature in the stabilized soil. OPC works better for coarse material, while lime is better suitable for fine-grained soil. Again, contrary to lime, OPC does not require external materials to result in a binding blend. The coarse silt type of soil can be stabilized by lime and cement better than by the pure binder.
-
 
 \subsection{Compaction}
 The samples were treated by vibratory surface compaction using the equipment available at SGI to compact the granular material of soil. The 4500 g of each soil specimens were compacted in three layers in a plastic tube with an outer steel tube. The surface of each compacted layer was scratched before the adding of the next layer. All the samples were compacted one hour after mixing with binders which excluded the evaluation of curing period from various binders. After compaction, the specimens were cut to a height of ca. 2.06 m, sealed with paraffin and stored within the plastic tube. 
@@ -255,7 +332,7 @@ Equations (8) and (9) represent measured 7-day UCS (kPa) for soil types A and B.
 
 \begin{figure}[H]
       	\centering
-         		\includegraphics[width=14.0cm]{Fig_06.jpg}
+         	\includegraphics[width=14.0cm]{Fig_06.jpg}
      \caption{UCS strength for soil-binder mixtures cured for 7 days: (a) A; (b) B} \label{fig:06}
 \end{figure}
 
@@ -271,7 +348,7 @@ The OPC-lime blend for soil type A was not significant and removed from the regr
 
 \begin{figure}[H]
       	\centering
-         		\includegraphics[width=7.0cm]{Fig_07.jpg}
+         	\includegraphics[width=7.0cm]{Fig_07.jpg}
      \caption{UCS strength for soil-binder mixtures cured for 28 days: (a) A; (b) B; (c) C.} \label{fig:07}
 \end{figure}
 
@@ -288,7 +365,20 @@ The effects from blends of OPC/lime and lime/GGBFS are shown for soil type B in 
 	UCS=+5880C+2270L+ 2960S+4600LS (13)
 	UCS=+2390C+2140L+810S+1390CL+4290LS (14) 
 	UCS=+1340C+371L+1910S (15)
- The clay content in soil type C is lower than in soil types A and B (6\%), which suggests that slaked lime has a lesser effect on the UCS of soil type C compared to types A and B. The minimum 7-day cube UCS is specified for cement-bound material 1 (CBM 1) and cement bound material 3 (CBM 3), Table 4. Here, none of the binders reach the limits for CBM 1-3 with 2.5\% of binder content. 
+ The clay content in soil type C is lower than in soil types A and B (6\%), which suggests that slaked lime has a lesser effect on the UCS of soil type C compared to types A and B. The minimum 7-day cube UCS is specified for cement-bound material 1 (CBM 1) and cement bound material 3 (CBM 3), Table \ref{tab:4}. Here, none of the binders reach the limits for CBM 1-3 with 2.5\% of binder content. 
+ 
+ \begin{table}[H]
+ \caption{Requirements for compressive strength (MPa) for soil stabilised by cement after 7 days of curing}
+    \centering
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+       \rowcolor{Goldenrod}
+        Shape form & Category 1 & Category 2 & Category 3 \\ \hline
+        Cube specimens & 4.5 & 7.5 & 10.0 \\ \hline
+        Cylindrical specimens & 3.6 & 6.0 & 8.0 \\ \hline
+    \end{tabular}
+    \label{tab:4}
+\end{table}
  
  The OPC-GGBFS and GGBFS result in soil UCS <2 MPa after a 90-day curing period. This is because the quantity of calcium hydroxide in these blends is not sufficient to form a uniform mixture which would produce pozzolanic material. The GGBFS-lime blend shows the most notable UCS increase in the period between 7 and 28 days. Table 5 shows that a mixture of OPC and lime gives higher UCS compared to pure OPC or lime. The clay content in the sandy clay was 17\%, versus clay content in control clay (55\%). It means that the results of soil stabilization additionally dependent on clay content.
 
