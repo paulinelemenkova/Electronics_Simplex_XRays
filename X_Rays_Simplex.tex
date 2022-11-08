@@ -16,6 +16,7 @@
 \definecolor{Goldenrod}{RGB}{255,228,181}
 \usepackage{tabularx}
 \usepackage{chemmacros}
+\usepackage[flushleft]{threeparttable}
 
 %=================================================================
 % MDPI internal commands
@@ -129,14 +130,14 @@ The \hl{samples }were fabricated \hl{using} raw material originated \hl{from the
      \item Soil type C, included only measurements of the particle density and $W_N$. Thus, particle density $\rho _s$ for soil type C was $2.67 mg/m^3$ and $W_N$ =13.0\%; plasticity index <10. The \hl{Table} \ref{tab:1} summarises the performed tests\hl{.} 
 \end{itemize}
 
+%------------------------->
 \begin{table}[H]
+\begin{threeparttable}
 \caption{Summary \hl{on tests for soil samples} soil stabilised by \hl{OPC, hydrated} lime and \hl{GGBFS}}
 \small
-%    \centering
     \newcolumntype{C}{>{\centering\arraybackslash}X}
     \begin{tabularx}{\textwidth}{|l|l|l|l|l|l|l|l|l|l|l|l|}
     \toprule
-  %  	 \rowcolor{Goldenrod}
         \textbf{Soil type A} & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\
         \midrule
         Recipe & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ 
@@ -144,14 +145,12 @@ The \hl{samples }were fabricated \hl{using} raw material originated \hl{from the
         OPC & 0.00 & 2.50 & 1.25 & 0.00 & 0.00 & 0.00 & 1.25 & 0.83 & 1.67 & 0.42 & 0.42 \\ \hline
         Lime & 0.00 & 0.00 & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.83 & 0.42 & 0.42 & 1.67 \\ \hline
         GGBFS & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.00 & 0.00 & 0.83 & 0.42 & 1.67 & 0.42 \\ \hline
-%         \rowcolor{Goldenrod}
         \textbf{Soil type B} & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ 
         \midrule
         Recipe & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
         OPC & 0.00 & 2.50 & 1.25 & 0.00 & 0.00 & 0.00 & 1.25 & 0.83 & 1.67 & 0.42 & 0.42 \\ \hline
         Lime & 0.00 & 0.00 & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.83 & 0.42 & 0.42 & 1.67 \\ \hline
         GGBFS & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.00 & 0.00 & 0.83 & 0.42 & 1.67 & 0.42 \\ \hline
-%         \rowcolor{Goldenrod}
         \textbf{Soil type C} & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ 
         \midrule
         Recipe & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
@@ -159,11 +158,14 @@ The \hl{samples }were fabricated \hl{using} raw material originated \hl{from the
         Lime & 0.00 & 0.00 & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & – & – & – & – \\ \hline
         GGBFS & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.00 & 0.00 & – & – & – & – \\ 
         \bottomrule
-    \end{tabularx}
-    \label{tab:1}
+    \end{tabularx} \label{tab:1}
+        \begin{tablenotes}
+      \scriptsize
+      	\item \emph{Note for Table 1.} Grain size distribution, particle density, natural water content and \hl{XRD} tests\hl{ }performed for all\hl{ }soil types recipe 0. Optimum moisture content was tested for\hl{ type} A recipe 0 and type B recipes 0 and 1. Liquid limit was tested for\hl{ }types A and B, recipe 0. The UCS tests were performed on days \nth{7} (\hl{types} A and B, recipes 0 to 6, twice in each case), \nth{28} (A: recipes 0 to 6, triple; B: all the recipes, twice; C: recipes 1 to 6, twice) and \nth{90} (twice for all cases for A: all recipes; B: recipes 0 to 6; C: 0 to 7).
+    \end{tablenotes}
+  \end{threeparttable}
 \end{table}
-
-Notation for Table \ref{tab:1}: Grain size distribution, particle density, natural water content and \hl{XRD} tests\hl{ }performed for all\hl{ }soil types recipe 0. Optimum moisture content was tested for\hl{ type} A recipe 0 and type B recipes 0 and 1. Liquid limit was tested for\hl{ }types A and B, recipe 0. The UCS tests were performed on days \nth{7} (\hl{types} A and B, recipes 0 to 6, twice in each case), \nth{28} (A: recipes 0 to 6, triple; B: all the recipes, twice; C: recipes 1 to 6, twice) and \nth{90} (twice for all cases for A: all recipes; B: recipes 0 to 6; C: 0 to 7).
+%-------------------------<
 
 We estimated the mineral composition and structure of the solid phases of soil types A, B and C using the difference in X-ray diffraction (XRD), to understand its response on addition of binders during stabilization process. The principle consists in the adsorption of binders during reactions with soil, and transport of the materials of stabilizing agents through pores of soil, which performs at interfaces of soil with various physico-chemical properties that are different for types A, B and C in soil components. Soil types A and B contained clay minerals in a mixed layer of smectite (montmorillonite) \ch{(Na,Ca)0.33(Al,Mg)2(Si4O10)(OH)2*nH2O}, illite \ch{(K,H3O)(Al,Mg,Fe)2(Si,Al)4O10[(OH)2,(H2O)]}, kaolinite \ch{Al2(OH)4Si2O5}. Soil type C contains chlorite \ch{ClO-2}, illite \ch{K,H3O)(Al,Mg,Fe)2}\\\ch{(Si,Al)4O10[(OH)2,(H2O)]} and kaolinite \ch{Al2(OH)4Si2O5}. 
 
