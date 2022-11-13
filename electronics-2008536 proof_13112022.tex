@@ -1,0 +1,1047 @@
+%  LaTeX support: latex@mdpi.com 
+%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
+
+%=================================================================
+\documentclass[electronics,article,accept,pdftex,moreauthors]{Definitions/mdpi} 
+% For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal and change "submit" to "accept". The document class line would be, e.g., \documentclass[preprints,article,accept,moreauthors,pdftex]{mdpi}. This is especially recommended for submission to arXiv, where line numbers should be removed before posting. For preprints.org, the editorial staff will make this change immediately prior to posting.
+
+\graphicspath{{figures/}} % path to folder with figures
+\usepackage{caption}
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{\alph{subfigure}}
+\DeclareCaptionLabelFormat{subcaptionlabel}{\normalfont(\textbf{#2}\normalfont)}
+\captionsetup[subfigure]{labelformat=subcaptionlabel}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{gensymb} % for degree symbol
+\usepackage[super]{nth}
+\usepackage{color, colortbl}
+\definecolor{Goldenrod}{RGB}{255,228,181}
+\usepackage{tabularx}
+\usepackage{chemmacros}
+\usepackage[flushleft]{threeparttable}
+
+%=================================================================
+% MDPI internal commands
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2022}
+\copyrightyear{2022}
+\externaleditor{Academic Editor: Hamid Reza Karimi}
+\datereceived{18 October 2022} 
+%\daterevised{} % Only for the journal Acoustics
+\dateaccepted{} 
+\datepublished{} 
+%\datecorrected{} % Corrected papers include a "Corrected: XXX" date in the original paper.
+%\dateretracted{} % Corrected papers include a "Retracted: XXX" date in the original paper.
+\hreflink{https://doi.org/} % If needed use \linebreak
+%\doinum{}
+%------------------------------------------------------------------
+% The following line should be uncommented if the LaTeX file is uploaded to arXiv.org
+%\pdfoutput=1
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, lineno, float, amsmath, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, cleveref, amsthm, hyphenat, natbib, hyperref, footmisc, url, geometry, newfloat, caption
+
+%=================================================================
+%% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{Simplex Lattice Design and X-ray Diffraction for Analysis of Soil Structure: A Case of Cement-Stabilised Compacted Tills Reinforced with Steel Slag and Slaked Lime}
+%Attention: title altered. Please confirm change.
+
+% MDPI internal command: Title for citation in the left column
+\TitleCitation{Simplex Lattice Design and X-ray Diffraction for Analysis of Soil Structure: A Case of Cement-Stabilised Compacted Tills Reinforced with Steel Slag and Slaked Lime}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0002-0577-9936} % Add \orcidA{} behind the author's name
+\newcommand{\orcidauthorB}{0000-0002-5759-1089} % Add \orcidA{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{Per Lindh $^{1,2}$\orcidA{} and Polina Lemenkova $^{3,}$*\orcidB{}}
+
+%\longauthorlist{yes}
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{Per Lindh and Polina Lemenkova}
+
+% MDPI internal command: Authors, for citation in the left column
+\AuthorCitation{Lindh, P.; Lemenkova, P.}
+% If this is a Chicago style journal: Lastname, Firstname, Firstname Lastname, and Firstname Lastname.
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad Swedish Transport Administration, Neptunigatan 52, P.O. Box 366, SE-201-23 \hl{Malm\"{o}}, Sweden; %MDPI: English writing is recommended, please try to provide.
+ per.lindh@trafikverket.se or  per.lindh@byggtek.lth.se\\
+$^{2}$ \quad \hl{Division of Building Materials,}  %MDPI: Address information should be sorted from subordinate to superior,  please confirm this revision, the same as aff 3
+Department of Building and Environmental Technology,  Lunds Tekniska H\"{o}gskola LTH (Faculty of Engineering),  Lund University, P.O. Box 118, SE-221-00 Lund, Sweden\\
+$^{3}$ \quad \hl{Laboratory of Image Synthesis and Analysis,} \'{E}cole polytechnique de Bruxelles (Brussels Faculty of Engineering),  Universit\'{e} Libre de Bruxelles,  Building L, Campus de Solbosch, ULB---LISA CP165/57, Avenue~Franklin D. Roosevelt 50, B-1050 Brussels, Belgium}
+
+% Contact information of the corresponding author
+\corres{Correspondence: polina.lemenkova@ulb.be; Tel.: +32-471860459}
+
+\abstract{Evaluating the structure of soil prior to building construction {is} valuable in a large variety of geotechnical and civil engineering applications. To built an effective framework for assessing {the strength of the} stabilised %ize was changed to ise to be consistent with your usage of other similar words in the rest of the manuscript. Please confirm.
+	soil{,} the {presented} workflow {includes} a complex approach of simplex lattice design and X-Ray diffraction for the analysis of soil structure. Different from {the} traditional {in situ} measurements, we propose a statistical framework for effective decision-making on binder combination {to stabilise soil collected in three localities of Southern Sweden---Brom\"olla Municipality (Sk\aa ne County), Petersborg (\"Osterg\"otland County) and \"Orebro (\"Orebro County). A }practical {solution is presented that includes the evaluation of} strength properties of {various types of soil} using ordinary Portland cement (OPC), slaked lime and steel slag as pure agents and blended binders. {The} specimens were collected in Southern Sweden and included sandy silty tills and clay till (clay content 6--18\%). The preprocessing included {the} mineralogical analysis of mineral composition and soil structure by X-ray diffraction (XRD) and a sieve. The {soil samples} were fabricated, compacted, rammed, stabilised by six binder blends and assessed for uniaxial compressive strength (UCS). {The} moisture condition value (MCV) and water content tests were done for compacted soil and showed variation in the MCV values for different binders. The study determined the effects from binder blends on the UCS gain in three types of soil, measured on days 7, 28 and 90. Positive effects were noted from {the} steel slag/lime blends on {the} UCS gain in sandy silty tills. A steel slag/slaked lime mixed binder performed better compared to {the} pure binders. The effectiveness of {the} simplex lattice design was demonstrated in a series {of} ternary diagrams showing soil strength evaluated by adding {the} stabilising agents in different proportions.}
+
+% Keywords
+\keyword{steel slag; simplex lattice design; ordinary Portland cement; slaked lime; X-ray diffraction; compressive strength; soil stabilisation; civil engineering} 
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+\PACS{05.50.+q; 81.40.Cd; 82.40.Qt; 81.40.Ef; 81.20.Wk; 62.20.Qp; 83.50.Xa; 45.70.Mg; 92.40.Lg; 81.40.Lm; 62.20.M-}
+\MSC{76Axx; 74Exx; 74Fxx; }
+\JEL{Q00; Q01; Q24; Q55; Q56}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+Cementitious materials have positive effects on the development of strength and the hardening of clayey soil during stabilisation. {Many} traditional binders often are used for soil stabilisation, {among which} cement is{ }widely{ accepted} \cite{Moh,Lindh2021a,Lapointe,ZhangTao}. Apart from cement, many other stabilising agents {can be} added to binder blends. Replacing the cement by other materials aims to enhance the technical performance of soil stabilisation, {to} increase the economic efficiency of the construction process through cheaper materials and {to} reduce {the} environmental impacts from $CO_2$ discharges~\cite{Joulazadeh,Yietal2014,Renjith}. Moreover,{ }blends fabricated from various binders {have} more durable and notable {effects on soil} \cite{Lindh2022b,Mariri,Fasihnikoutalab}. The~stabilisation of soil is due to the ability of binders to decrease the space between the pores in soil through the bonding of particles during the period of curing~\cite{Lindh2021b,Bahrekazemi}. The~decrease of volume in the pores of soil develops over the time of curing and results in the decreased porosity and permeability of soil~\cite{Lindh2022b,Mariri,Fasihnikoutalab}. {Cementitious} binders increase the compactness and strength of soil, which{ }increases its workability and bearing capacity, the key requirements for soil quality in road~construction.	
+
+Many various binders have notable beneficial effects on the development of strength in binder--soil blends in the process of stabilisation. For~instance, adding slaked lime and steel slag increases the uniaxial compressive strength (UCS) of soil, as~reported in many studies~\cite{Lindh2021b,Bahrekazemi,Lindh2022c}. As~for the impact from the mixtures of binders on soil compactness, earlier works have shown their positive effects on various types of soil intended for the construction of roads~\cite{Dahlin,Nordmark,Kallen}. {An industrial waste} with pozzolanic properties, {ground granulated blast furnace slag (GGBS) is obtained }as a by-product from the steelmaking process~\cite{Aziz}. 
+
+The fundamental physical properties of metallurgical slag include viscosity and rheological parameters, formed through chemical composition, which includes \ch{SiO2} (silica), \ch{Al2O3} (aluminium oxide) and \ch{MgO} (magnesium oxide) \cite{Slezak}. This makes steel slag a widely used {binding} component in soil stabilisation for roadbed structures~\cite{Mraz,Lindh2004,Erdenebold}, as~it has {benefices} on pore structure of soil, due to its {physio-chemical} properties. Because~soil as a porous{ }material {which experiences} shrinkage and decrease in voids with the inclusion of cementitious binders, the~compaction and stabilisation processes significantly decrease porosity and increase {the} bulk density of soil~\cite{Bhattacharjee}. This suggests positive {effects} from {the} additives in soil, which increase its strength and decrease permeability and porosity when added in optimal amounts~\cite{Ozelim,Lindh}. Another often-studied environmental parameter that is closely related to climate setting is the freeze-thaw durability of soil used as roadbeds, which is actual for countries with cold climate conditions~\cite{Su,Sahlabadi}. 
+
+{The stabilisation of soil takes into account }chemistry of {the} stabilising agents {which provides the} effects of binders on soil strength~\cite{Bowers}. {Thus, the} UCS of soil {is improved with binders due to the} beneficial effects from reinforcing materials. {Moreover, }the resistivity of soil {is enhanced by stabilisation against} seasonal climate cycles, such as freeze--thaw processes. Earlier works reported that {added binders}, such as cement pastes{, improved the} microstructure and geotechnical parameters of soil{: }shear modulus {and} compaction). {This is caused by} the increased bonds between the soil's particles, which chemically reinforce its inner structure~\cite{Ghorbani,Rajabi,Zhangetal2018}. {Steel slag} binds soil particles effectively in contaminated soil polluted by heavy metals, and~decreases leaching~\cite{Negim,Lindh2022d,Moon}. In{ }turn, steel mill sludge can be used for the reinforcement of clay bricks, to~decrease negative environmental consequences{ }and to optimise its utilisation~\cite{Sarani}.
+
+The effects from blended binders and their influence on the development of soil strength are not as straightforward. {If we consider }the general{ }inclusion of stabilising agents{, it }increases the UCS of soil{. However, }the effects may vary individually{, }depending on the types of binders and soil{, as~well as the effects from }external factors{ such as} the curing period and temperature). For~example, slaked lime and fly ash{ }reduce the permeability and improve{ }the strength in {a} cohesive soil due to {the} pozzolanic reaction from {the} siliceous and aluminous {materials} \cite{Sharma2012}. The~incorporation of cement decreases the porosity in the pore microstructure of soil due to the bonding of particles~\cite{Inyang,Consoli}. However, the~effects from {different pH in various }soil types {are} also {important: strength increases with a} higher pH{ }\cite{Gori,Ghobadi}. {Finally, the~important parameter is the mineralogy and structure of soil}{: }fine{-}grained, medium{-}grained or coarse-grained{ }\cite{Malikzada}. 
+
+Although rates in strength development{ }generally increase{ along }with {the} increasing content of binders in {a} cement--soil mixture, external factors {such as }moisture content and temperature{ }also play a significant role. Thus, since the effects of pore refinement in soil and compaction act simultaneously during curing{, }it is always necessary to determine{ }the effects from binders{ in each case, since they may} vary {in different} binders used for soil stabilisation. {In general, binders} reduce the permeability of soil, {ensure} a gain in strength and {eliminate} environmental effects (decreased leaching, reduced pH).
+
+The existing literature and case studies on soil stabilisation tend to focus on the final stage when assessing the gain in strength. It {includes} the effects from various binders, both traditional \citep{Boswell,Sharma2017,Sahuetal2017} or novel {ones} \cite{Saffari,YadavTiwari}, and~the evaluation of workability of {the} stabilised soil~\cite{Ogila}. These methods are effective to evaluate the general stabilisation results and to obtain a rough estimate of the soil strength over a curing period. However, a~comparative analysis of blended mixtures needs special attention, to~provide adequate data regarding the analysis of the effects from particular binders and their ratios, when mixed in proportion, on~soil strength. Apart from the traditional UCS testing{, }more advanced techniques that allow for accurate and nondestructive measurements{ }include seismic waves and X-rays~\cite{Kierlik,Wani}. One such technique {uses} elastic P-waves {propagating} through { a soil specimen. The~soil} strength is calculated from the {measured P-}wave velocities, which directly correlate with {the} stiffness, hardness and density {of the} microstructure {in a} porous medium~\cite{Fakhrabadi,Sharma2011}.
+
+The accurate and systematic evaluation of strength in {clayey tills from Southern Sweden is lacking. Such soils are subject to harsh environmental and climate conditions and require individual testing of their behaviour. This especially concerns experimental tests on stabilisation} by various binders using blended mixtures in various proportions. {Therefore, the} objective of this study was to {fill in this gap by presenting a study with a special focus on Swedish soils collected in three localities: Brom\"olla Municipality (Sk\aa ne County), Petersborg (\"Osterg\"otland County) and \"Orebro (\"Orebro County). The~study presents a statistical evaluation} of the effects from various {proportions of} binders{ }on soil strength. {To this end, we evaluated these effects over a period of curing and presented data as a series of ternary diagrams plotted by the simplex method.} Besides, the{ }influence of binders on the moisture condition value (MCV) of soil {was evaluated} to show their effects {on} soil improvement. The~{binders should be selected for each type of soil individually, because} various{ }binders are better adjusted to{ }various soil types{. }Therefore, the~effects from diverse binders should be tested and evaluated separately using a statistical approach to optimise the workflow. To~this end, we performed a series of statistical simplex tests to define the best relationships of soil--binder mixtures with regard to the strength of~soil.
+
+{This }study{ evaluated} the effects {from} stabilising agents{ on} the long-term strength gain in {three} types of soil measured on days 7, 28 and 90. {The binders included ordinary Portland cement (OPC), slaked lime and ground granulated blast furnace slag (GGBFS)}. {Additional} geotechnical characteristics were tested for each type of soil stabilised by various binders{: }dry density, water content and MCV. In~order to perform the tests more effectively, we performed a statistical optimisation of these processes using existing experimental approaches~\cite{Montgomery,MyersMontgomery}. The~research was {performed} using the available tools and equipment {of the Swedish Geotechnical Institute (SGI)}. The~methodology followed the{ }standards on soil quality testing defined{ }by the Swedish Institute for Standards (SIS). The~dynamics in strength and changes of soil structure stabilised by various binders were examined by the UCS{ and }moisture and compactness were {evaluated using} the Proctor compaction test during curing{. }The{ variations} were visualised, compared and {analysed as a} series of ternary plots{ showing the correlations between binders and the strength of the stabilised soil.} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Materials and~Methods}
+
+\subsection{Approach}
+
+To evaluate{ }structural and physicochemical {parameters} of the soil, we applied two types of tests: the moisture condition value (MCV) for the compaction characteristics of specimens{ }and the uniaxial compressive strength (UCS) {for strength properties of the stabilised soil}. 
+
+\subsection{Sample~Preparation}
+The {samples }were fabricated {using} raw material originated {from three localities of Southern Sweden---Brom\"olla Municipality (Sk\aa ne County), Petersborg (\"Osterg\"otland County) and \"Orebro (\"Orebro County). Tested} soil included{ }types A, B and C with varied physiochemical characteristics, described as follows. The~clay content of {these} specimens varied from 6 to 18\%. Based on the dominating size of the particles within the tested specimens, {sandy silty tills characterised} soils of types A and C, {and clay till characterised} soil type B. {The material characteristics is summarised as follows.}
+
+\begin{itemize}
+     \item Soil type A had the following characteristics: particle density $\rho _s =2.70~\text{mg/m}^3$; the optimum moisture content (OMC) according to the modified Proctor compaction test was 6.1\%; the dry density was \highlighting{$\rho _d = 2.26 ~\text{Mg/m}^3$}; %MDPI: Please confirm if ths unit Mg/m should be mg/m
+     the natural water content was ($W_N$) = 9.8\%; the liquid limit measured by a cone penetrometer ($W_L$) was 19.3\%; the plasticity index was <10. 
+     \item Soil type B had the following characteristics: particle density, $\rho _s = 2.71~\text{mg/m}^3$; OMC according to the modified Proctor compaction test, 9.2\%; dry density, $\rho _d = 2.12 ~\text{Mg/m}^3$; natural water content, \mbox{($W_N$) = 14.6\%}; liquid limit by cone penetrometer, ($W_L$) 23.9\%; plasticity index <11.9. 
+     \item Soil type C included only measurements of the particle density and $W_N$. Thus, the particle density $\rho _s$ for soil type C was $2.67 ~\text{mg/m}^3$ and $W_N$ = 13.0\%; plasticity, \mbox{index < 10}. The~{Table} \ref{tab:1} summarises the performed tests{.} 
+\end{itemize}\vspace{-6pt}
+
+%------------------------->
+\begin{table}[H]\small\setlength{\tabcolsep}{2.54mm}
+%\begin{threeparttable}
+\caption{Summary {of tests for soil samples} stabilised by {OPC, hydrated} lime and {GGBFS}.} \label{tab:1}
+%\small
+%    \newcolumntype{C}{>{\centering\arraybackslash}X}
+    \begin{tabular}{llllllllllll}
+    \toprule
+        \textbf{Soil Type A} & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ &\\
+        \midrule
+        Recipe & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ 
+ 
+        OPC & 0.00 & 2.50 & 1.25 & 0.00 & 0.00 & 0.00 & 1.25 & 0.83 & 1.67 & 0.42 & 0.42 \\ 
+        Lime & 0.00 & 0.00 & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.83 & 0.42 & 0.42 & 1.67 \\ 
+        GGBFS & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.00 & 0.00 & 0.83 & 0.42 & 1.67 & 0.42 \\  \midrule
+        \textbf{Soil Type B} & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~  \\ 
+        \midrule
+        Recipe & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ 
+        OPC & 0.00 & 2.50 & 1.25 & 0.00 & 0.00 & 0.00 & 1.25 & 0.83 & 1.67 & 0.42 & 0.42 \\ 
+        Lime & 0.00 & 0.00 & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.83 & 0.42 & 0.42 & 1.67 \\ 
+        GGBFS & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.00 & 0.00 & 0.83 & 0.42 & 1.67 & 0.42 \\  \midrule
+        \textbf{Soil Type C} & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~  \\ 
+        \midrule
+        Recipe & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ 
+        OPC & 0.00 & 2.50 & 1.25 & 0.00 & 0.00 & 0.00 & 1.25 & – & – & – & – \\
+        Lime & 0.00 & 0.00 & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & – & – & – & – \\ 
+        GGBFS & 0.00 & 0.00 & 1.25 & 2.50 & 1.25 & 0.00 & 0.00 & – & – & – & – \\ 
+        \bottomrule
+    \end{tabular}
+    
+    \footnotesize{\emph{\hl{Notations} for Table~\ref{tab:1}.} %MDPI: Please confirm if the italics should be retained.
+    Grain size distribution, particle density, natural water content and {XRD} tests{ }performed for all{ }soil types recipe 0. Optimum moisture content was tested for{ type} A recipe 0 and type B recipes 0 and 1. Liquid limit was tested for{ }types A and B, recipe 0. The~UCS tests were performed on days 7 ({types} A and B, recipes 0 to 6, twice in each case), 28 (A: recipes 0 to 6, thrice; B: all the recipes, twice; C: recipes 1 to 6, twice) and 90 (twice for all cases for A: all recipes; B: recipes 0 to 6; C: 0 to 7).}
+%        \begin{table}
+%      \scriptsize
+%      	\item  
+%    \end{tablenotes}
+%  \end{threeparttable}
+\end{table}
+\unskip
+%-------------------------<
+
+\subsection{X-ray Diffraction (XRD)}
+{Diverse behaviours of various types of soil during stabilisation can be analysed based on mineral soil properties, which are related to the compositional characteristics of soil. The~analysis of soil by X-ray diffraction (XRD) may facilitate the explanation of the mechanisms underlying the responses of soil specimens to hardening with binders. Therefore, XRD enables one to better understand soil properties and to~estimate the compositional content of particles and minerals contained in the soil samples. }{To this end, we} estimated the mineral composition and structure of the solid phases of soil using the difference in {XRD} patterns, to~understand their response to the addition of binders during the stabilisation~process. 
+
+{The X-ray diffraction (XRD) method was applied to identify the mineral compositions of soil specimens and to observe soil specimens. The~quantitative evaluation was conducted with an electron microscope to obtain structural and microstructural information (crystallite size and lattice pattern) for soil specimens prepared for stabilisation and hardening. The~principle of soil hardening} consists in the adsorption of binders during reactions with soil and~transport of the{ }stabilising {materials} through the pores of soil, which performs at {the} interfaces of soil with various {physiochemical} properties that are different for{ }the soil components. Soil types A and B contained clay minerals in a mixed layer of smectite{ }montmorillonite){, }illite{ and }kaolinite{. }Soil type C contained chlorite \ch{ClO-2}{, }illite{ }and kaolinite{.} 
+
+\subsection{Binders}
+Binders can be rated according to their effects on the strength development in soil (Table \ref{tab:2}). For~example, the~suggested binders containing {sand, cement and lime were suitable  for illite and kaolinite}. This explained the choice of lime and cement as binders for the stabilisation of soil types A and B. The~chlorite{ }in soil type C responded well to{ stabilisation }by cement, which is why OPC was selected for soil type C. For~these reasons, the~following commercially available binders were used for the soil treatment: {OPC, GGBFS} and a slaked~lime. 
+
+%------------------------->
+\begin{table}[H]\setlength{\tabcolsep}{6.13mm}
+%\begin{threeparttable}
+\caption{Suitability of binders in{ }stabilisation{ of }soil (Unified Soil Classification System, USCS).}\label{tab:2}
+\small
+%    \newcolumntype{C}{>{\centering\arraybackslash}X}
+    \begin{tabular}{@{}lllllll}
+    \toprule
+        \textbf{Stabilising Agent ***} & \textbf{G} & \textbf{GW} & \textbf{GM} & \textbf{S} & \textbf{CS} & \textbf{CH} \\ \midrule
+        A & ++ & ++ & ++ & + & + & $-$ \\ 
+        B & ++ & ++ & ++ & ++ & ++ & + \\ 
+        C & ++ & ++ & ++ & ++ & ++ & $-$ \\ 
+        D & + & + & ++ & $-$ & + & ++ \\
+        C (CaO + GP cement) & $-$ & $-$ & + & $-$ & + & ++ \\
+        C (CaO + GGBFS) & $-$ & ++ & ++ & $-$ & + & + \\ 
+        E & ++ & ++ & + & + & $-$ & $-$ \\ 
+        F & ++ & ++ & + & + & $-$ & $-$ \\ 
+        G & + & ++ & ++ & $-$ & ++ & + \\
+\bottomrule
+    \end{tabular} 
+    
+    \footnotesize{\emph{\hl{Notations for Table}~\ref{tab:2}.}  %MDPI: Please confirm if the italics should be retained.
+     Definitions of symbols, according to USCS: G: gravel (crushed rock); GW: well-graded gravel; GM: silty/clayey gravel; S: sand; CS: sandy/silty clays; CH: fat heavy clay. \hl{**} %MDPI: There is no ** in this table, please confirm if this can be removed
+    {Suitability: ++ perfectly suitable; + satisfactory; $-$ not suitable.}*** {Symbols for binders: A---GP cement AS3972; B---GB cement AS3972; C---cementitious blend of pozzolanic binders (fly ash + GP cement + GGBFS + CaO in triple and quaternary mixtures); D---slaked lime or calcium hydroxide (CaO); E---asphalt/bitumen, standard AS2008; F---GP cement/asphalt; G---insoluble polymers.} }
+%        \begin{tablenotes}
+%      \scriptsize
+%      	\item \emph{Notations for Table~2.} 
+%	\item * {Definitions of symbols, according to USCS: G: gravel (crushed rock); GW: well-graded gravel; GM: Silty/clayey gravel; S: sand; CS: Sandy/silty clays; CH: fat heavy clay}.
+%	\item 
+%	\item 
+%    \end{tablenotes}
+%  \end{threeparttable}
+\end{table}
+\unskip
+%%-------------------------<
+
+
+The blends of {the standardised} binders were used in blending operation, which was performed in a mixing with soil, according to {the SGI} standards for soil composition and recommended binders{. It was }controlled through records used for the ternary plots for the UCS estimation. {We }selected different types of binders for each type of soil, because~these binders reacted differently with soil particles. The~{reaction products were based on six} different binder recipes, which were as follows (in kg): (1) OPC (100); (2) OPC (50) + GGBFS (50); (3) GGBFS (100); (4) GGBFS (50) + lime (50); (5) lime (100); (6) lime (50) + OPC (50); {Figure} \ref{fig:01}. The~soil was treated with these binders or their blends. The~{quantity} of binder was {equal} to 2.5\% of the {dry density of soil}, because~it enabled us to {reach the} maximum UCS {value} of 5 MPa after {3 months} of curing period. {The structure of the} three soil types {varied} from clay to coarse sand particles {and were} treated with lime and cement. There were differences in the effects from various binders (Table \ref{tab:3}). For~instance, OPC quickly started to react with soil particles{ }within 2 h after mixing{. }Most of the reaction was finished in 2 months, {Figure} \ref{fig:01}. In~contrast, the~effects from lime were more consequent and similar to a straight~line. 
+
+The argumentation for the use of these materials is as follows. Organic matter increases in soil compaction due to {the} molecular bonds between the particles. Sand contributes to the increase of mechanical stability, density, cohesion and gain in{ }strength{. }Allophane {increases the} pozzolanic strength, compaction and densification of soil. Kaolinite has effects on the stability{, }contributes to{ }early strength and workability, as well as later strength gain of soil. Illite {and montmorillonite add} an early strength gain{ }to the~soil. 
+\begin{figure}[H]
+%      	\centering
+         		\includegraphics[width=8.0cm]{Fig_01.jpg}
+     \caption{The effects from OPC and lime on soil particles (10 g binder{/}100 g dry soil).} \label{fig:01}
+\end{figure}\vspace{-6pt}
+
+%------------------------->
+\begin{table}[H]
+\caption{Reaction on stabilisation from main soil compounds and suggested~binders}
+ \begin{tabularx}{\textwidth}{lll}
+ \toprule
+        \textbf{Soil Component} & \textbf{Chemical Formula} & \textbf{Binders} \\ 
+        \midrule
+        Organic matter & – & Mechanical \\ 
+        Sand & \ch{SiO2} & Clay loam; asphalt \\
+        Allophane & \highlighting{\ch{Al2O3·(SiO2)1.3-2·(2.5-3)H2O
+}} %MDPI: Please confirm if the format is correct
+        & Lime (CaO) \\ 
+        Kaolinite & \ch{Al2(OH)4Si2O5} & Sand; cement; lime \\ 
+        Illite & \ch{K,H3O(Al,Mg,Fe)2(Si,Al)4O10[(OH)2,(H2O)} & Cement; lime \\
+        Montmorillonite & \ch{(Na,Ca)0.33(Al,Mg)2(Si4O10)(OH)2·nH2O} & Lime (CaO) \\ 
+        \bottomrule
+  \end{tabularx} \label{tab:3}
+\end{table}
+%-------------------------<
+
+
+
+To{ add }workflow effectiveness in{ }geotechnical works, various {commercial producers present }binders with trade names. However, often the exact content and the proportions might not be available, which requires testing binders for soil stabilisation. For~example, lime and OPC mixed with clay {react during one and half year of stabilisation period}. However, {the combination of lime with clay} has more productivity compared to {the one of cement with clay} with regard to {the} products, which depends on the temperature. {The} OPC works better for coarse material, while lime is more suitable for fine-grained soil. Again, contrary to lime, OPC does not require external materials to result in a binding blend. The~coarse silt type of soil can be stabilised by lime and cement better than by the pure~binder.
+
+\subsection{Compaction}
+The {soil specimens} were treated by surface compaction using the {devices} available at SGI to compact the granular material of soil. A quantity of ~4\hl{.}5 kg %MDPI: We changed the commas appearing between the digits into decimal dots. Please confirm this revision.
+of each{ }specimen{ }was compacted in{ }layers, {using }plastic {and steel equipment with a levelled surface for each corresponding layer}. {The samples were mixed with binders and compacted for} one hour. {Thereafter}, the~specimens were cut to a height of ca. 2.06 m, sealed { }and stored within {a} plastic tube. The~specimens did not lost weight during the curing period. Each layer was compacted with a {5 kg} rammer with 25 blows, which resulted in {a} decrease of 30 cm. To~sift out large lumps, the~soil {was sieved, with pieces bigger} than 19 mm{ }removed. The~suitable specimens were{ }moulded again and {located} into a sealed container{. }The containers were {kept at a} constant temperature of 20~°C and{ }relative humidity of 85\%. The~MCV of the mixture, was determined in one hour of soil compaction, while the UCS tests were taken on days 7, 28 and 90{.} 
+
+\subsection{Moisture Condition Value (MCV)}
+The MCV of the soil--binder mixture was determined because compaction is a key procedure of soil improvement with regard to strength and durability. The~advantage of the MCV consists in its simplicity and availability to measure the {least} compaction{ }needed to{ reach }the {highest} soil density at a {given} water content for the {assessment of} the fitness of soil for geotechnical{ }works. The~MCV was determined in accordance with the EN 13286-46 standards and the UK Standard 1377~\cite{SIS2003,BIS}, adapted for the current case. This MCV is based on the repeated compaction of a specimen with a rammer until the limited compaction is~reached. 
+
+The technical procedure was as follows. A~free-falling 7 kg and 97 mm diameter rammer was attached to {the equipment}. A~{specimen of 1500 g} was {placed at} 2.50 m.{ }The upper limit for the MCV was set at 14, to~ensure the {OMC} of the stabilised soil. The~dry densities of{ }specimens stabilised by 6 types of binders described in the previous section were {processed }and evaluated by {the moisture condition apparatus (MCA), a device developed by the TRL in Scotland for the evaluation of the MCV} (\url{https://www.hixtra.com/services/moisture-condition-value-mcv/} \hl{(accessed date)}). %MDPI: We moved URL address here  and please add the accessed date (day month year)
+The~{performance of} the dry density of the {compacted} samples {was evaluated} for the different soil types (Figure \ref{fig:02}), where it demonstrated higher {values} for type A compacted by {the} MCA, compared to the vibratory compaction (Figure~\ref{fig:02}). In~contrast, soil type B demonstrated{ lower values} for the MCA compaction, compared to the vibratory compaction. The~MCV for soil A was {enhanced compared to B}, due to the{ }vibratory compaction{, }which { affected the} dry density {differently than the }MCA{.} 
+
+\begin{figure}[H]
+      	\centering
+         		\includegraphics[width=14.0cm]{Fig_02.jpg}
+     \caption{{\hl{Comparison} %MDPI: Please use periods as decimal sign instead of center dot. 
+ of the dry density values for various compaction methods} and binder blends{: }types A (\textbf{left}) and B (\textbf{right}).} \label{fig:02}
+\end{figure}
+
+{Due} to the variations in the mineralogical content {of the soil samples} (clay, quartz{),} the natural water content differed {significantly} in {various} soil types within the same group ({Figure} \ref{fig:03}). 
+
+
+
+Nevertheless, the~vibratory compaction resulted in {values of the }dry density identical to those of the MCA compaction,{ which} were <14 for all {the} samples. For~the case of MCV < 14, the~soil is workable and becomes homogeneous and dense with normal compaction equipment. Each soil type was homogenised; however, small variations in the water content remained between each specimen due to the individual properties of soil, which {was} within the normal distribution. {The natural }water content in {a} stabilised soil is an important variable for groundwater discharge and the evaluation of soil chemistry ({Figure} \ref{fig:03}). Thus, if the moisture content of a soil is {at optimal values, the soil is} suitable for construction~works. 
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=6.3cm]{Fig_03a.jpg}
+         \caption{ \centering{Soil type A (Brom\"olla)}}
+         \label{fig:03a}
+     \end{subfigure} \\
+\vfill \vspace{1mm}
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=6.3cm]{Fig_03b.jpg}
+         \caption{ \centering{Soil type B (Petersborg)}}
+         \label{fig:03b}
+     \end{subfigure}\hfill \hspace{2mm}
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=6.3cm]{Fig_03c.jpg}
+         \caption {\centering{Soil type C (\"Orebro)}}
+         \label{fig:03c}
+     \end{subfigure}
+        \caption{{\hl{Variations} in }natural water content {by} soil~types.}%MDPI:  %MDPI: Please use periods as decimal sign instead of center dot. 
+        \label{fig:03}
+\end{figure}
+\subsection{Simplex Lattice~Design}
+The mixture design was adopted from existing studies to evaluate the effects from {the} individual binders and their blends using a simplex lattice design with {three} binders: OPC, GGBFS and slaked lime. We used six components of {the} recipes for the normal simplex lattice design. The~scheme in Figure~\ref{fig:04} presents three single blends {and binder} mixtures. %Please check intended meaning has been retained
+
+
+\begin{figure}[H]
+%      	\centering
+         		\includegraphics[width=7.0cm]{Fig_04.jpg}
+     \caption{{\hl{Equilateral} triangle showing a }simplex lattice {mixture} design for binder selection (3, 2)} \label{fig:04}
+\end{figure}%MDPI: Please use periods as decimal sign instead of center dot. 
+
+Three statistical regression models characterised the material, depending on the test design. These included linear, quadratic and special cubic models as in Equations~(\ref{eq:01})--(\ref{eq:03}), respectively. 
+\begin{itemize}
+\item[(a)] Linear model:
+\begin{equation}\label{eq:01}
+﻿	y=\beta _1 x_1 + \beta _2 x_2 + \beta _3 x_3 + \epsilon
+\end{equation}
+\item[(b)] Quadratic model:
+\begin{equation}\label{eq:02}
+﻿	y=\beta _1 x_1 + \beta _2 x_2 + \beta _3 x_3 + \beta _12 x_1  x_2 + \beta _13 x_1  x_3 + \beta _23 x_2  x_3 + \epsilon  
+\end{equation}
+\item[(c)] Special cubic model:
+\begin{equation}\label{eq:03}
+﻿	y=\beta _1 x_1 + \beta _2 x_2 + \beta _3 x_3 + \beta _12 x_1  x_2 + \beta _13 x_1  x_3 + \beta _23 x_2  x_3 + + \beta _123 x_1 x_2  x_3 + \epsilon
+\end{equation}
+where $\beta$ is the regression coefficient; $\epsilon$ is the residual error; $x_i$ is the value of factors; $y$ is the dependent~variable.
+\end{itemize}
+
+The{ }variable $y$ contained {the effects from the linear model and the interactions of the quadratic model and special cubic models, respectively}. We included only the significant effects from the {last two} regression models. The~regression models {were evaluated using} an ANOVA to {test} the significance {level $p$ >0.05}. The~null hypothesis $H_0$ was that the mean of MCV or UCS of{ }soil was equal for all {stabilising agents}. {The} alternative hypothesis $H_1$ {implied the contrary, i.e.,~at least one binder differed from the others}. Testing the equality of binders led to Equations~(\ref{eq:04}) and (\ref{eq:05}):
+\begin{equation}\label{eq:04}
+H_0 = \mu _1 = \mu _2 = <\ldots> = \mu _a
+\end{equation}
+\begin{equation}\label{eq:05}
+H_1: \mu _i \neq \mu _j
+\end{equation}
+for at least one pair of $(i, j)$.
+
+If $H_0$ was true, then all treatments had a common mean $\mu$. The~p-level indicated {we could reject} $H_0${. }$H_0$ was statistically tested{.} 
+
+\section{Results}
+{In this section, we quantitatively evaluate our method on real case data for the three soil types stabilised by various binders. All the statistical experiments were performed using the dataset on three soil types and implemented in MATLAB. For~quantitatively evaluating the simplex lattice design, three different datasets on soil materials were used. The} results are illustrated as a series of plotted ternary plots showing {the} response surfaces for {the} UCS and MCV ({Figures} \ref{fig:05}--\ref{fig:08}). The~circles on the borders of these figures signify {the content of the binders:} single binder, binary blend or a complex mixture. The~results {are shown} in {Figure} \ref{fig:05}. {The isoline indicates the} interaction between{ the }binders as {factors}.{ The }response surfaces in {Figures} \ref{fig:05}--\ref{fig:08}{ }show the effects from the binders on soil~stabilisation. 
+
+\subsection{MCV}
+{Equations} (\ref{eq:06}) and (\ref{eq:07}) {refer to the} response surface equation for binder blends tested for {various} soil types. Here, \hl{C, L and S} %MDPI: Please check through the paper if the format of variables should be unified (normal or italic).
+stand for cement, lime and steel slag, and~the combinations LS and CLS for their mixes, respectively. The~numbers represent the quantities of binders taken for stabilisation.
+\begin{equation}\label{eq:06}
+	MCV=13.2C+11.4L+8.9S+3.7CS+2.2LS
+\end{equation}
+\begin{equation}\label{eq:07}
+	MCV=12.4C+10.5L+8.6S+7.4CL+22.5CLS
+\end{equation}
+
+The total amount was adjusted for 100\%, that is, the boundary conditions satisfied the following assumption:  $0 \le C$, $S, L \le 1$ and $C+L+S = 1$, {with the }sum of the independent {factors equal to} one for all cases. One can derive from Equations~(\ref{eq:06}) and (\ref{eq:07}) that {the OPC} had the {strongest effect} on soil compaction after one hour of {curing}. There were correlations between various binders for all the soil types with{ }positive {values} indicating the {enhanced}~MCV.
+
+Nevertheless, {binder blends contributed significantly} to the MCV{. Thus, }the {combination} of blend OPS/GGBFS 50/50\% {increased} the MCV{ }up to 0.925 at a maximum for {type} A (Equation (\ref{eq:06})). The{ }blend of binders OPC/lime 50/50\% {contributed} to the {increase of} MCV {to} 1.85{ }for soil B (Equation~(\ref{eq:01})). For~soil type A, there was an adjusted R2 value of 0.999, i.e.,~a very low variability. {The} GGBFS {had the least effects} on soil compaction ({Figure} \ref{fig:05}).
+
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=6.2cm]{Fig_05a.jpg}
+         \caption{\centering}
+         \label{fig:05a}
+     \end{subfigure} \hfill \hspace{2mm}
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=6.2cm]{Fig_05b.jpg}
+         \caption{\centering}
+         \label{fig:05b}
+     \end{subfigure}
+        \caption{MCV for various binders blended with soil: (\textbf{a}) type A {(Brom\"olla)}; (\textbf{b}) type B {Petersborg}.}
+        \label{fig:05}
+\end{figure}
+\unskip
+
+\subsection{UCS}
+The UCS {was tested for types} A and B on days 7, 28 and 90, while soil type C was tested on days 28 and 90. 
+
+\subsubsection{Measurements of UCS on 7th Day}
+Because the soil types varied in clay content, we assumed that {the performance of} lime {differed} in soil types A{, B and }C, which was proved by {Figures} \ref{fig:06}--\ref{fig:08}. The{ }7-day UCS {values evaluated} for{ }types A and B {are given in }Equations (\ref{eq:08}) and (\ref{eq:09}).
+\begin{equation}\label{eq:08}
+﻿	UCS=+2930C+850L+310S–1640CL +2500CS+2150LS
+\end{equation}
+\begin{equation}\label{eq:09}
+﻿	UCS=+1500C+640L+240S +1650LS
+\end{equation}
+
+{The }UCS for soil A and B {cured} for 7 days {is shown in Figure} \ref{fig:06}. {The comparative analysis of soil types showed that } type A {had} a higher strength compared to{ that of }B and C. Furthermore, it also {demonstrated} a significantly larger {extent of variations in UCS values} compared to type~B. 
+
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=6.2cm]{Fig_06a}
+         \caption{\centering}
+         \label{fig:06a}
+     \end{subfigure} \hfill \hspace{2mm}
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=6.2cm]{Fig_06b}
+         \caption{\centering}
+         \label{fig:06b}
+     \end{subfigure}
+        \caption{UCS strength for soil--binder mixtures cured for 7 days: (\textbf{a}) A {(Brom\"olla)}; (\textbf{b}) B {(Petersborg)}.}
+        \label{fig:06}
+\end{figure}
+
+Indeed, soil type A had the UCS varying within 2--6 MPa, while the UCS of type B {ranged} from 0.8 {up to} 2.7 MPa. {The} 7-day UCS {for type A} showed {a} significant full quadratic regression model, i.e.,~all effects from all binders were considerable. We also noted that OPC had the largest impact on the UCS of soil, while GGBFS had the lowest impact on UCS for both soil types ({Figure} \ref{fig:06}). After~a 7-day curing period, the~OPC-lime blend had a negative effect on UCS, i.e., this part of the blend reduced the UCS. For~soil type B, the~UCS on the 7th day of curing resulted in a linear model %Please check intended meaning has been retained
+and had a quadratic significant term lime--GGBFS. With~a 50:50\% blend of lime--GGBFS, the~quadratic term had more impact on the UCS compared to the effects from single slaked~lime. 
+
+\subsubsection{Measurements of UCS on 28th~Day}
+The UCS of stabilised soil of types A, B and C on~the 28th day of the curing period are presented in the subplots of {Figure} \ref{fig:07}. The~UCS of soil in kPa for soil types A, B and C on the 28th day of curing is summarised in Equations~(\ref{eq:10})--(\ref{eq:12}). Here C, L and S indicate OPC, lime and GGBFS, and~the combinations CS and LS are their mixes.
+\begin{equation}\label{eq:10}
+﻿	UCS=+3800C+1030L +1210S+4270CS+6030LS
+\end{equation}
+\begin{equation}\label{eq:11}
+﻿	UCS=+2080C+810L+410S+4440LS
+\end{equation}
+\begin{equation}\label{eq:12}
+﻿	UCS=+1090C+180L+430S+2360CS
+\end{equation}\vspace{-6pt}
+
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=7cm]{Fig_07a.jpg}
+         \caption{\centering{Soil type A (Brom\"olla)}}
+         \label{fig:07a}
+     \end{subfigure} \\
+\vfill \vspace{1mm}
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=5.8cm]{Fig_07b.jpg}
+         \caption{\centering{Soil type B (Petersborg)}}
+         \label{fig:07b}
+     \end{subfigure}\hfill \hspace{2mm}
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=6.2cm]{Fig_07c.jpg}
+         \caption{\centering{Soil type C (\"Orebro)}}
+         \label{fig:07c}
+     \end{subfigure}
+        \caption{UCS strength for soil--binder mixtures cured for 28 days; {soil types}: (\textbf{a}) A; (\textbf{b}) B; (\textbf{c}) C.}
+        \label{fig:07}
+\end{figure}
+
+The OPC--lime blend{ }was not significant and was removed from the regression for{ }type A.  On~day 28 of curing{, the} OPC remained the dominating element for the UCS of soil. However, GGBFS was larger compared to the lime component (Equation~(\ref{eq:08})). {As for type B}, samples{ }received significant effects {on day 28} (Equation (\ref{eq:11})){, as in} the {results on day 7} (Equation (\ref{eq:09})). Nevertheless, the~{effects from the blend} ``slaked lime/steel slag'' {were more notable} compared to the other blends{, which} suggests that lime was well suited to soil type B as a binder. The{ additional }points were {used} to {check} the results in the UCS test {on day 28} of curing{, }which {showed an acceptable} R2 value. The~effects from lime were not significant for soil type C. The~{effects} from{ lime as a binder were smaller} (Equation (\ref{eq:12})) {compared} to{ }types A and B and could be considered as minor {ones}. Such minor effect from the slaked lime was due to the low clay content in soil type C. Other factors could be the short curing time, as the effects from lime were time-dependent, see \mbox{{Figure} \ref{fig:01}}. Certainly, slaked lime required a longer curing time to result in a reaction similar to that from cement and steel~slag.  
+
+\subsubsection{Measurements of UCS on 90th~Day}
+The {results of the} UCS {values evaluated on day 90 of curing are shown} in {Figure} \ref{fig:08}. Equation~(\ref{eq:13}) {described the} type A{ }with the least effective binder{ }as OPC--GGBFS. This can be compared with Equations~(\ref{eq:08}) and (\ref{eq:10}) showing significant effects from the OPC--GGBFS blend. The~{ lime--GGBFS mixture showed a} notable correlation {on day 90 of} curing{. }The {effects from} the lime--GGBFS{ }mixture with a 50/50\%{ were more significant} compared to {the} single binder of slaked lime. The~effects from the blends of OPC/lime and lime/GGBFS are shown for{ }type B (Equation (\ref{eq:14})). The~maximum UCS {was} in {the} range between the UCS of the OPC/lime and lime/GGBFS {mixtures} ({Figure} \ref{fig:08}). {GGBFS had the highest impact on the UCS of soil type C on day 90 of curing}, see ({Figure} \ref{fig:08} and Equation~(\ref{eq:14})).
+\begin{equation}\label{eq:13}
+﻿	UCS=+5880C+2270L+ 2960S+4600LS
+\end{equation}
+\begin{equation}\label{eq:14}
+	﻿UCS=+2390C+2140L+810S+1390CL+4290LS
+\end{equation}
+\begin{equation}\label{eq:15}
+﻿	UCS=+1340C+371L+1910S
+\end{equation}\vspace{-15pt}
+
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=7cm]{Fig_08a.jpg}
+         \caption{\centering{Soil type A (Brom\"olla)}}
+         \label{fig:08a}
+     \end{subfigure} \\
+\vfill \vspace{1mm}
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=6.2cm]{Fig_08b.jpg}
+         \caption{\centering{Soil type B (Petersborg)}}
+         \label{fig:08b}
+     \end{subfigure}\hfill \hspace{2mm}
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=6.2cm]{Fig_08c.jpg}
+         \caption{\centering{Soil type C (\"Orebro)}}
+         \label{fig:08c}
+     \end{subfigure}
+        \caption{UCS for soil types (\textbf{a}) A, (\textbf{b}) B, (\textbf{c}) C cured for 90 days with various~binders.}
+        \label{fig:08}
+\end{figure}
+	
+The clay content {was the lowest} in soil type C{ }(6\%), which suggested that slaked lime had a lesser effect on the UCS of {this type of soil} (Equation~(\ref{eq:15})). The~minimum 7-day UCS of the cube specimens %Please check intended meaning has been retained
+is specified for cement-bound material 1{ }and cement bound material 3{ in }Table \ref{tab:4}{, which shows that }none of the binders {reached} the limits{ }with 2.5\% of {the} content. 
+ 
+ %------------------------->
+\begin{table}[H]\small\setlength{\tabcolsep}{8.78mm}
+\caption{Requirements for compressive strength (MPa) for soil stabilised by cement after 7 days of~curing.} \label{tab:4}
+%\small
+%    \newcolumntype{C}{>{\centering\arraybackslash}X}
+    \begin{tabular}{@{}llll}
+    \toprule
+         \textbf{Shape Form} & \textbf{Category 1} & \textbf{Category 2} & \textbf{Category 3} \\ 
+         \midrule
+        Cube specimens & 4.5 & 7.5 & 10.0 \\
+        Cylindrical specimens & 3.6 & 6.0 & 8.0 \\ 
+        \bottomrule
+    \end{tabular}
+\end{table}
+%-------------------------<
+ 
+ The OPC--GGBFS mixture and GGBFS resulted in soil with a UCS <2 MPa {on day 90 of }curing{, }because{ the amount of }calcium hydroxide in these blends was not sufficient to form a uniform mixture which would produce pozzolanic {effects}. The~GGBFS--lime blend {resulted in the highest increase of the} UCS {values }between 7 and 28 days. Table~\ref{tab:5} shows that {a blend of} OPC and lime {contributed more to the} UCS{, }compared to {the} pure OPC or lime. The~{content of clay} in {a} sandy clay {soil} was 17\% versus {that} in control clay (55\%){, which }means that the results of soil stabilisation{ were additionally }dependent{ }on {the} clay~content.
+ 
+ %------------------------->
+\begin{table}[H]\setlength{\tabcolsep}{8.2mm}
+\caption{Effects from binders on strength gain in stabilised clay soil with 55\% of clay, on~the 7th day of curing. Binders: cement (OPC) and lime (CaO).}
+\small
+%    \newcolumntype{C}{>{\centering\arraybackslash}X}
+    \begin{tabular}{@{}llll}
+    \toprule
+        \textbf{Stabilising Agent} & \textbf{10\% CaO} & \textbf{10\% OPC} & \textbf{10\% OPC + 2\% CaO} \\ 
+        \midrule
+        UCS: MPa & 1.010 & 0.790 & 1.420 \\ 
+        \bottomrule
+    \end{tabular}\label{tab:5}
+\end{table}
+%-------------------------<
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+
+The strength{ }of {various types of soil---}sandy silty tills and clay till---{was} evaluated using {the} selected blended binders taken as pure agents and in mixes. We tested {the effects from OPC, GGBFS and slaked lime as single binders and as} blended mixtures {on soil strength. Specifically, we evaluated the variations of the UCS and MCV} in{ }soil{. Moreover, we }examined the mineral structural and content properties of{ }soil using X-ray diffraction (XRD) and a sieve and assessed the water content {in specimens}. The~tests {aimed at} improving the {parameters} of soil prior to road construction. The~obtained results led to the following conclusions:
+
+\begin{enumerate}
+   \item The {increase in} strength was {observed in all} the tested binders{; however, cement demonstrated the best }effects{, }which {resulted in }quick soil stabilisation.
+   \item The UCS increase in soil stabilised by {the} OPC--lime blend was similar to that of GGBFS. However, a~binder containing GGBFS gave lower values.  
+   \item The measurements on day 7 of curing showed that the {blend} of GGBFS and slaked lime {worked} similarly to the pure slaked lime. However, {on day 90 of curing, }there was a notable {effect on} soil strength from the GGBFS--lime blend. 
+   \item The specimens stabilised with GGBFS {demonstrated} the lowest UCS {values on day 7} of curing{. }However, on~the 28th day of curing, they performed similarly to those stabilised by~lime.
+   \item {A slow} increase in {the} UCS {values} for the lime-stabilised specimens was explained by the low clay content in soil {classified as} type A. {The} slaked lime performed better as a binder{, }and had a stronger {effect on} soil type B{.}
+   \item The GGBFS--lime blend demonstrated benefit on the UCS of soil and performed approximately in a similar way as OPC for soil strength after 90 days of curing.	
+   \item {The} limit for clay content in soil should be{ }10\% {for the effects from lime}.
+   \item {There were no} significant variations in {the} effects from {blends of} the three binders with regard to {the} reduction {in} soil compaction, as~reflected in the MCV values{.}
+ \end{enumerate}
+
+	This article demonstrated the effects {of} single binders (cement/lime/steel slag) and their blended mixes on various types of clayey soils collected in {three localities of} Southern Sweden{---Brom\"olla (Sk\aa ne County), Petersborg (\"Osterg\"otland County) and \"Orebro (\"Orebro County)}. Although~{the} traditional methods of soil stabilisation widely apply OPC or slaked lime as stabilising agents,{ }using blended binders{ has become a trend in the construction industry}. This is caused by the improved properties of {blended} mixtures. As~a result, blending OPC with GGBFS or OPC with pozzolanic materials, such as fly ash, has gained {recent} attention in civil engineering{. }
+	
+	We noted positive effects from the blends GGBFS/lime on UCS gain in soils {of} A and B {classes}. Moreover, the~GGBFS/lime {blend had stronger effects on soil strength} compared to{ }GGBFS or lime. In~soil {of class} B, the~{mixture} of GGBFS and slaked lime {performed better than }OPC, {because the} blend of GGBFS/lime did not affect the compatibility of soil as {an} OPC binder, inasmuch as all the specimens were produced with an identical compaction approach. Second, {the amount of} clay in {specimens of class} B was enough {for effective soil stabilisation}, while in soil {of class} A, it was too low {for} a reaction{ }when adding OPC{. The~vibratory compaction method demonstrated} similar {results} in {the} dry density values of soil{ }to the specimens compacted by {the }MCA {method}. Therefore, it {is} possible to achieve these values {in situ}, as~the maximum MCV was lower than~14.
+	
+	The {technical goal} of blending stabilising agents {was to contribute to} the economic efficiency %Please check intended meaning has been retained
+	of {the} workflow, followed by environmental goals for the utilisation of waste material, and~to experimentally produce a new binder with better properties for technical reasons. Nonetheless, blending binders does not mechanically lead to the improved properties of {the} stabilising agent. Instead, the~opposite reaction may occur as the result depends on various factors, including soil grain size or~temperature, among others. Therefore, mixed binders were tested in this study, to~ensure that they performed better than single binders for a particular soil from Southern~Sweden.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+
+{In this paper, we proposed a mixed-binder-based soil stabilisation method which works for various kinds of soil types. The~}technical implementation of soil stabilisation and compaction is very expensive. At~the same time, such works are a{ necessary }requirement prior to all construction projects, including {the} construction of buildings, foundations, infrastructure, tunnels, roads, railways and highways, {as well as the} associated transport infrastructure. Indeed, soil quality is one of the crucial factors in civil engineering which ensures safety and workability of {the} constructed objects. Therefore, {the use of} advanced, robust {and} reliable methods for soil compaction and stabilisation are essential for industrial {works, since} compaction and the UCS {of soil} are {effective} indicators of soil quality{.}
+
+{At first, we presented} advanced statistical techniques{ }to optimise the ratio of {stabilising agents} aimed at determining the effects of their blended mixtures. {We} presented a series of simplex tests used to visualise{ }the effects from {binders} on clayey soil. {Our detailed discussion and experimental results showed that a simplex lattice approach} was beneficial for{ estimating the necessary }quantity of{ }binders {required for effective soil stabilisation}. For~{the} more complex cases, it is recommended to perform several {trials} for the estimation of various quantities of binders, as~independent statistical variables. However, in~this case, the~total number of trial runs required is much greater{, }which results in a more complicated{ }assessment {of} soil strength stabilised by various{ combinations of} binders. Correctly selected binders{ }adjusted to the specific type of soil{ }result in a better {stabilisation.}
+
+{Second, we demonstrated that} well-adjusted techniques could significantly improve {the} time-consuming workflow{ in civil engineering works }and reduce the {total} economic costs of project implementation. For~example, in~{this} study, {we showed that }using pure OPC for the stabilisation of soil types A and B resulted in the best effects on {the }MCV{, because~}soil stabilised by OPC {had} a higher compaction energy due to a much higher{ }stiffness. 
+	
+The limitations of the presented work {might} include the {regional aspect related to Swedish soils}, which is {controlled by} the values obtained in the laboratory. Therefore, we cannot directly compare the results of the tested {Swedish} soil {samples} with {the results} obtained on soil tested in {other regions}. At~the same time, real conditions may affect soil response due to regional and local properties and environmental climate setting. As~a result, this may lead to variations in the {physiochemical} parameters of soil and mixing conditions. As~a recommendation for future similar works, testing different various types of blends (proportions of binders within the blends) and different quantities of binders (in absolute mass{) }would be beneficial. The~improvement of soil compaction in~situ {may }include {the} responses from compacted soil and the soil underneath, upon~compaction. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{Conceptualisation, methodology, software, validation, visualisation, resources, supervision, project administration---P.L. (Per Lindh); formal analysis, investigation, data curation, funding acquisition---P.L. (Polina Lemenkova); writing---original draft preparation, P.L. (Polina Lemenkova); writing---review and editing, P.L. (Per Lindh) and P.L. (Polina Lemenkova). All authors have read and agreed to the published version of the~manuscript.}
+
+\funding{This research was funded by Electronics Editorial Office, MDPI, providing 100\% discount for APC for publication of this manuscript.}
+
+\institutionalreview{\hl{Not applicable}.}
+%
+\informedconsent{\hl{Not applicable}.}%MDPI: To AE: Please confirm if  IRBS and ICS can be removed
+
+\dataavailability{Not applicable.} 
+
+\acknowledgments{We thank the two anonymous reviewers for their comments and reading of this manuscript. The~study was supported by the NUTEK---Swedish Agency for Economic \& Regional Growth, Peab AB construction and civil engineering enterprise and Merox. We thank Cementa (HeidelbergCement Group Northern Europe) for the provided cement binder and~Nordkalk for the limestone binder. The~authors acknowledge the help from colleagues from the Lund University, Chalmers Institute of Technology and the Swedish Geotechnical Institute with laboratory assistance and advice regarding the experimental tests. }
+
+\conflictsofinterest{The authors declare no conflict of~interest} 
+
+\abbreviations{Abbreviations}{
+The following abbreviations are used in this manuscript:\\
+
+\noindent 
+\begin{tabular}{@{}ll}
+ANOVA & Analysis of variance \\
+GGBS & Ground granulated blast furnace slag \\
+{MCA} & {Moisture condition apparatus} \\
+MCV & Moisture condition value \\
+OMC & Optimum moisture content \\
+OPC & Ordinary Portland cement \\
+SGI & Swedish Geotechnical Institute \\
+SIS & Swedish Institute for Standards \\
+UCS & Uniaxial compressive strength \\ 
+{USCS} & {Unified Soil Classification System} \\
+WL & Liquid limit \\
+WN & Natural water content \\
+XRD & X-ray diffraction
+\end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{adjustwidth}{-\extralength}{0cm}
+
+\reftitle{References}
+
+%\bibliography{SimplexLattice.bib}
+%\nocite{*}
+\begin{thebibliography}{999}
+
+\bibitem[Moh(1962)]{Moh}
+Moh, Z.C.
+\newblock {Soil Stabilization with Cement and Sodium Additives}.
+\newblock {\em J. Soil Mech. Found. Div.} {\bf
+  1962}, {\em 88},~81--105.
+\newblock {{https://doi.org/10.1061/JSFEAQ.0000478}}.
+
+\bibitem[Lindh and Lemenkova(2021)]{Lindh2021a}
+Lindh, P.; Lemenkova, P.
+\newblock {Evaluation of Different Binder Combinations of Cement, Slag and CKD
+  for S/S Treatment of TBT Contaminated Sediments}.
+\newblock {\em Acta Mech. Autom.} {\bf 2021}, {\em 15},~236--248.
+\newblock {{https://doi.org/10.2478/ama-2021-0030}}.
+
+\bibitem[Lapointe \em{et~al.}(2012)Lapointe, Fannin, and Wilson]{Lapointe}
+Lapointe, E.; Fannin, J.; Wilson, B.W.
+\newblock {Cement-Treated Soil: Variation of UCS with Soil Type}.
+\newblock In Proceedings of the Grouting and Deep Mixing. In Proceedings of the
+  Fourth International Conference on Grouting and Deep Mixing,  \hl{New Orleans, LA, USA, 15--18 February} 2012; pp.
+  512--521.%MDPI: All highlights: We added the location and date of the conference. Please confirm.
+\newblock {{https://doi.org/10.1061/9780784412350.0037}}.
+
+\bibitem[Zhang and Tao(2008)]{ZhangTao}
+Zhang, Z.; Tao, M.
+\newblock {Durability of Cement Stabilized Low Plasticity Soils}.
+\newblock {\em J. Geotech. Geoenviron. Eng.} {\bf
+  2008}, {\em 134},~203--213.
+\newblock {{https://doi.org/10.1061/(ASCE)1090-0241(2008)134:2(203)}}.
+
+\bibitem[Joulazadeh and Joulazadeh(2010)]{Joulazadeh}
+Joulazadeh, M.; Joulazadeh, F.
+\newblock {Slag; Value Added Steel Industry Byproducts}.
+\newblock {\em Arch. Metall. Mater.} {\bf 2010}, {\em
+  55},~1138--1145.
+\newblock {{https://doi.org/10.2478/v10172-010-0017-1}}.
+
+\bibitem[Yi \em{et~al.}(2014)Yi, Liska, and Al-Tabbaa]{Yietal2014}
+Yi, Y.; Liska, M.; Al-Tabbaa, A.
+\newblock {Properties of Two Model Soils Stabilized with Different Blends and
+  Contents of GGBS, MgO, Lime, and PC}.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2014}, {\em
+  26},~267--274.
+\newblock {{https://doi.org/10.1061/(ASCE)MT.1943-5533.0000806}}.
+
+\bibitem[Renjith \em{et~al.}(2020)Renjith, Robert, Gunasekara, Setunge, and
+  O’Donnell]{Renjith}
+Renjith, R.; Robert, D.J.; Gunasekara, C.; Setunge, S.; O’Donnell, B.
+\newblock {Optimization of Enzyme-Based Soil Stabilization}.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2020}, {\em
+  32},~04020091.
+\newblock {{https://doi.org/10.1061/(ASCE)MT.1943-5533.0003124}}.
+
+\bibitem[Lindh and Lemenkova(2022)]{Lindh2022b}
+Lindh, P.; Lemenkova, P.
+\newblock {Geochemical tests to study the effects of cement ratio on potassium
+  and TBT leaching and the pH of the marine sediments from the Kattegat Strait,
+  Port of Gothenburg, Sweden}.
+\newblock {\em Baltica} {\bf 2022}, {\em 35},~47--59.
+\newblock {{https://doi.org/10.5200/baltica.2022.1.4}}.
+
+\bibitem[Mariri \em{et~al.}(2019)Mariri, Moayed, and Kordnaeij]{Mariri}
+Mariri, M.; Moayed, R.Z.; Kordnaeij, A.
+\newblock {Stress-Strain Behavior of Loess Soil Stabilized with Cement,
+  Zeolite, and Recycled Polyester Fiber}.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2019}, {\em
+  31},~04019291.
+\newblock {{https://doi.org/10.1061/(ASCE)MT.1943-5533.0002952}}.
+
+\bibitem[Fasihnikoutalab \em{et~al.}(2017)Fasihnikoutalab, Asadi, Unluer, Huat,
+  Ball, and Pourakbar]{Fasihnikoutalab}
+Fasihnikoutalab, M.H.; Asadi, A.; Unluer, C.; Huat, B.K.; Ball, R.J.;
+  Pourakbar, S.
+\newblock {Utilization of Alkali-Activated Olivine in Soil Stabilization and
+  the Effect of Carbonation on Unconfined Compressive Strength and
+  Microstructure}.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2017}, {\em
+  29},~06017002.
+\newblock {{https://doi.org/10.1061/(ASCE)MT.1943-5533.0001833}}.
+
+\bibitem[Lindh and Lemenkova(2021)]{Lindh2021b}
+Lindh, P.; Lemenkova, P.
+\newblock {Resonant Frequency Ultrasonic P-Waves for Evaluating Uniaxial
+  Compressive Strength of the Stabilized Slag–Cement Sediments}.
+\newblock {\em Nord. Concr. Res.} {\bf 2021}, {\em 65},~39--62.
+\newblock {{https://doi.org/10.2478/ncr-2021-0012}}.
+
+\bibitem[Bahrekazemi and Bodare(2003)]{Bahrekazemi}
+Bahrekazemi, M.; Bodare, A.
+\newblock {Effects of Lime-Cement Soil Stabilization against Train Induced
+  Ground Vibrations, Grouting and Ground Treatment}.
+\newblock In Proceedings of the {Third International Conference on Grouting and
+  Ground Treatment},  \hl{New Orleans, LA, USA, 10--12 February} 2003; pp. 562--574.
+\newblock {{https://doi.org/10.1061/40663(2003)29}}.
+
+\bibitem[Lindh and Lemenkova(2022)]{Lindh2022c}
+Lindh, P.; Lemenkova, P.
+\newblock {Seismic velocity of P-waves to evaluate strength of stabilized soil
+  for Svenska Cellulosa Aktiebolaget Biorefinery Östrand AB, Timrå}.
+\newblock {\em Bull. Pol. Acad. Sci. Tech. Sci.}
+  {\bf 2022}, {\em 70},~e141593.
+\newblock {{https://doi.org/10.24425/bpasts.2022.141593}}.
+
+\bibitem[Dahlin \em{et~al.}(1999)Dahlin, Svensson, and Lindh]{Dahlin}
+Dahlin, T.; Svensson, M.; Lindh, P.
+\newblock {DC Resistivity and SASW for Validation of Efficiency in Soil
+  Stabilisation Prior to Road Construction}.
+\newblock In Proceedings of the 5th EEGS-ES Meeting,  \hl{Budapest, Hungary, 6--9 September} 1999; pp.
+  1--2.
+%\newblock Publisher: European Association of Geoscientists \& Engineers,
+%  cp-35-00099, 
+  {{https://doi.org/10.3997/2214-4609.201406466}}.
+
+\bibitem[Nordmark \em{et~al.}(2014)Nordmark, Vestin, Lagerkvist, Lind, Arm, and
+  Hallgren]{Nordmark}
+Nordmark, D.; Vestin, J.; Lagerkvist, A.; Lind, B.B.; Arm, M.; Hallgren, P.
+\newblock {Geochemical Behavior of a Gravel Road Upgraded with Wood Fly Ash}.
+\newblock {\em J. Environ. Eng.} {\bf 2014}, {\em
+  140},~05014002.
+\newblock {{https://doi.org/10.1061/(ASCE)EE.1943-7870.0000821}}.
+
+\bibitem[Källén \em{et~al.}(2016)Källén, Heyden, Åström, and
+  Lindh]{Kallen}
+Källén, H.; Heyden, A.; Åström, K.; Lindh, P.
+\newblock {Measuring and evaluating bitumen coverage of stones using two
+  different digital image analysis methods}.
+\newblock {\em Measurement} {\bf 2016}, {\em 84},~56--67.
+\newblock {{https://doi.org/10.1016/j.measurement.2016.02.007}}.
+
+\bibitem[Aziz \em{et~al.}(2022)Aziz, Abdullah, Salleh, Yoriya, Razak, Mohamed,
+  and Baltatu]{Aziz}
+Aziz, I.H.; Abdullah, M.M.A.B.; Salleh, M.A.A.M.; Yoriya, S.; Razak, R.A.;
+  Mohamed, R.; Baltatu, M.S.
+\newblock {The Investigation of Ground Granulated Blast Furnace Slag Geopolymer
+  at High Temperature by Using Electron Backscatter Diffraction Analysis}.
+\newblock {\em Arch. Metall. Mater.} {\bf 2022}, {\em
+  67},~227--231.
+\newblock {{https://doi.org/10.24425/amm.2022.137494}}.
+
+\bibitem[Ślęzak \em{et~al.}(2021)Ślęzak, Karbowniczek, Migas, and
+  Ślęzak]{Slezak}
+Ślęzak, M.; Karbowniczek, M.; Migas, P.; Ślęzak, W.
+\newblock {High Temperature Study of Industrial Slag from Further Modelling
+  Point of View}.
+\newblock {\em Arch. Metall. Mater.} {\bf 2021}, {\em
+  66},~637--643.
+\newblock {{https://doi.org/10.24425/amm.2021.135901}}.
+
+\bibitem[Mráz \em{et~al.}(2016)Mráz, Honetschlägerová, Suda, Valentin,
+  Kresta, and Luxemburk]{Mraz}
+Mráz, V.; Honetschlägerová, L.; Suda, J.; Valentin, J.; Kresta, F.;
+  Luxemburk, F.
+\newblock {Limiting Factors for the Applicability of Specific Types of
+  Energetic By-Products in Roadbed Structures}.
+\newblock In Proceedings of the Fourth Geo-China International Conference, \hl{Shandong, China, 25--27 July} 2016; pp. 69--76.
+\newblock {{https://doi.org/10.1061/9780784480069.009}}.
+
+\bibitem[Lindh(2004)]{Lindh2004}
+Lindh, P.
+\newblock Compaction- and Strength Properties of Stabilised and Unstabilised
+  Fine-Grained Tills.
+\newblock Ph.D. Thesis, Lund University, Lund, Sweden,  2004.
+\newblock {{https://doi.org/10.13140/RG.2.1.1313.6481}}.
+
+\bibitem[Erdenebold and Wang(2021)]{Erdenebold}
+Erdenebold, U.; Wang, J.P.
+\newblock {Chemical and Mineralogical Analysis of Reformed Slag during Iron
+  Recovery from Copper Slag in the Reduction Smelting}.
+\newblock {\em Arch. Metall. Mater.} {\bf 2021}, {\em
+  66},~809--818.
+\newblock {{https://doi.org/10.24425/amm.2021.136385}}.
+
+\bibitem[Bhattacharjee(2016)]{Bhattacharjee}
+\textls[-15]{Bhattacharjee, B.
+\newblock {Influence of Pore Size Distribution on the Properties of a
+  Stabilized Soil Cement System}.
+\newblock In Proceedings of the Fourth Geo-China International Conference, \hl{Shandong, China, 25--27 July} 2016; pp. 53--60.
+\newblock {{https://doi.org/10.1061/9780784480069.007}}.}
+
+\bibitem[de~S.~M.~Ozelim and Cavalcante(2018)]{Ozelim}
+de~S.~M.~Ozelim, L.C.; Cavalcante, A.L.B.
+\newblock {Representative Elementary Volume Determination for Permeability and
+  Porosity Using Numerical Three-Dimensional Experiments in Microtomography
+  Data}.
+\newblock {\em Int. J. Geomech.} {\bf 2018}, {\em
+  18},~04017154.
+\newblock {{https://doi.org/10.1061/(ASCE)GM.1943-5622.0001060}}.
+
+\bibitem[Lindh(2001)]{Lindh}
+Lindh, P.
+\newblock {Optimizing binder blends for shallow stabilisation of fine-grained
+  soils}.
+\newblock {\em Ground Improv.} {\bf 2001}, {\em 5},~23--34.
+\newblock {{https://doi.org/10.1680/grim.2001.5.1.23}}.
+
+\bibitem[Su \em{et~al.}(2014)Su, Tinjum, Gokce, and Edil]{Su}
+Su, Z.; Tinjum, J.M.; Gokce, A.; Edil, T.B.
+\newblock {Freeze-Thaw Cycling Effect on the Constrained Modulus and UCS of
+  Cementitiously Stabilized Materials}.
+\newblock In Proceedings of the Geo-Shanghai 2014, Pavement
+  Materials, Structures, and Performance,  \hl{Shanghai, China,  26--28 May} 2014; pp. 364--374.
+\newblock {{https://doi.org/10.1061/9780784413418.036}}.
+
+\bibitem[Sahlabadi \em{et~al.}(2021)Sahlabadi, Bayat, Mousivand, and
+  Saadat]{Sahlabadi}
+Sahlabadi, S.H.; Bayat, M.; Mousivand, M.; Saadat, M.
+\newblock {Freeze-Thaw Durability of Cement-Stabilized Soil Reinforced with
+  Polypropylene/Basalt Fibers}.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2021}, {\em
+  33},~04021232.
+\newblock {{https://doi.org/10.1061/(ASCE)MT.1943-5533.0003905}}.
+
+\bibitem[Bowers \em{et~al.}(2011)Bowers, Daniels, Lei, and DeBlasis]{Bowers}
+Bowers, B.F.; Daniels, J.L.; Lei, S.; DeBlasis, N.J.
+\newblock {Additives for Soil-Cement Stabilization}.
+\newblock In Proceedings of the {1st First International Symposium on Pavement and Geotechnical
+  Engineering for Transportation Infrastructure `Pavement and Geotechnical
+  Engineering for Transportation'}, \hl{Nanchang, China, 5--7 June} 2011; pp. 68--75.
+\newblock {{https://doi.org/10.1061/9780784412817.007}}.
+
+\bibitem[Ghorbani and Salimzadehshooiili(2019)]{Ghorbani}
+Ghorbani, A.; Salimzadehshooiili, M.
+\newblock {Dynamic Characterization of Sand Stabilized with Cement and RHA and
+  Reinforced with Polypropylene Fiber}.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2019}, {\em
+  31},~04019095.
+\newblock {{https://doi.org/10.1061/(ASCE)MT.1943-5533.0002727}}.
+
+\bibitem[Rajabi and Ardakani(2020)]{Rajabi}
+Rajabi, A.M.; Ardakani, S.B.
+\newblock {Effects of Natural-Zeolite Additive on Mechanical and
+  Physicochemical Properties of Clayey Soils}.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2020}, {\em
+  32},~04020306.
+\newblock {{https://doi.org/10.1061/(ASCE)MT.1943-5533.0003336}}.
+
+\bibitem[Zhang \em{et~al.}(2018)Zhang, Cai, and Liu]{Zhangetal2018}
+Zhang, T.; Cai, G.; Liu, S.
+\newblock {Reclaimed Lignin-Stabilized Silty Soil: Undrained Shear Strength,
+  Atterberg Limits, and Microstructure Characteristics}.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2018}, {\em
+  30},~04018277.
+\newblock {{https://doi.org/10.1061/(ASCE)MT.1943-5533.0002492}}.
+
+\bibitem[Negim \em{et~al.}(2012)Negim, Mench, Bes, Motelica-Heino, Amin,
+  Huneau, and {Le Coustumer}]{Negim}
+Negim, O.; Mench, M.; Bes, C.; Motelica-Heino, M.; Amin, F.; Huneau, F.; {Le
+  Coustumer}, P.
+\newblock {In~situ stabilization of trace metals in a copper-contaminated soil
+  using P-spiked Linz-Donawitz slag}.
+\newblock {\em Environ. Sci. Pollut. Res.} {\bf 2012}, {\em
+  19},~847--857.
+\newblock {{https://doi.org/10.1007/s11356-011-0622-1}}.
+
+\bibitem[Lindh and Lemenkova(2022)]{Lindh2022d}
+Lindh, P.; Lemenkova, P.
+\newblock {Soil contamination from heavy metals and persistent organic
+  pollutants (PAH, PCB and HCB) in the coastal area of Västernorrland,
+  Sweden}.
+\newblock {\em Gospod. Surowcami Miner.---Miner. Resour. Manag.}
+  {\bf 2022}, {\em 38},~147--168.
+\newblock {{https://doi.org/10.24425/gsm.2022.141662}}.
+
+\bibitem[Moon \em{et~al.}(2015)Moon, Wazne, Cheong, Chang, Baek, Ok, and
+  Park]{Moon}
+Moon, D.H.; Wazne, M.; Cheong, K.H.; Chang, Y.Y.; Baek, K.; Ok, Y.S.; Park,
+  J.H.
+\newblock {Stabilization of As-, Pb-, and Cu-contaminated soil using calcined
+  oyster shells and steel slag}.
+\newblock {\em Environ. Sci. Pollut. Res.} {\bf 2015}, {\em
+  22},~11162--11169.
+\newblock {{https://doi.org/10.1007/s11356-015-4612-6}}.
+
+\bibitem[Sarani \em{et~al.}(2022)Sarani, Hashim, Kadir, Hissham, Hassan,
+  Nabiałek, and Jeż]{Sarani}
+Sarani, N.A.; Hashim, A.A.; Kadir, A.A.; Hissham, N.F.N.; Hassan, M.I.H.;
+  Nabiałek, M.; Jeż, B.
+\newblock {Assessment on the Physical, Mechanical Properties and Leaching
+  Behaviour of Fired Clay Brick Incorporated with Steel Mill Sludge}.
+\newblock {\em Arch. Metall. Mater.} {\bf 2022}, {\em
+  67},~209--214.
+\newblock {{https://doi.org/10.24425/amm.2022.137491}}.
+
+\bibitem[Sharma \em{et~al.}(2012)Sharma, Swain, and Sahoo]{Sharma2012}
+Sharma, N.K.; Swain, S.K.; Sahoo, U.C.
+\newblock {Stabilization of a Clayey Soil with Fly Ash and Lime: A Micro Level
+  Investigation}.
+\newblock {\em Geotech. Geol. Eng.} {\bf 2012}, {\em
+  30},~1197--1205.
+\newblock {{https://doi.org/10.1007/s10706-012-9532-3}}.
+
+\bibitem[Inyang \em{et~al.}(2006)Inyang, Work, and Puppala]{Inyang}
+Inyang, H.I.; Work, D.; Puppala, A.
+\newblock {Porosity Fluctuations in Desiccating Samples of Grout-Stabilized
+  Soil}.
+\newblock {\em J. Mater. Civ. Eng.} {\bf 2006}, {\em
+  18},~267--271.
+\newblock {{https://doi.org/10.1061/(ASCE)0899-1561(2006)18:2(267)}}.
+
+\bibitem[Consoli \em{et~al.}(2021)Consoli, {Párraga Morales}, and
+  Saldanha]{Consoli}
+Consoli, N.C.; {Párraga Morales}, D.; Saldanha, R.B.
+\newblock {A new approach for stabilization of lateritic soil with Portland
+  cement and sand: Strength and durability}.
+\newblock {\em Acta Geotech.} {\bf 2021}, {\em 16},~1473--1486.
+\newblock {{https://doi.org/10.1007/s11440-020-01136-y}}.
+
+\bibitem[Gori(1994)]{Gori}
+\textls[-25]{Gori, U.
+\newblock {The pH influence on the index properties of clays}.
+\newblock {\em Bull. Eng. Geol. Environ.} {\bf 1994},
+  {\em 50},~37--42.
+\newblock {{https://doi.org/10.1007/BF02594954}}.}
+
+\bibitem[Ghobadi \em{et~al.}(2014)Ghobadi, Abdilor, and Babazadeh]{Ghobadi}
+Ghobadi, M.H.; Abdilor, Y.; Babazadeh, R.
+\newblock {Stabilization of clay soils using lime and effect of pH variations
+  on shear strength parameters}.
+\newblock {\em Bull. Eng. Geol. Environ.} {\bf 2014},
+  {\em 73},~611--619.
+\newblock {{https://doi.org/10.1007/s10064-013-0563-7}}.
+
+\bibitem[Malikzada \em{et~al.}(2022)Malikzada, Arslan, Develioglu, and
+  Pulat]{Malikzada}
+Malikzada, A.; Arslan, E.; Develioglu, I.; Pulat, H.F.
+\newblock {Determination of strength characteristics of natural and stabilized
+  alluvial subgrades}.
+\newblock {\em Arab. J. Geosci.} {\bf 2022}, {\em 15},~535.
+\newblock {{https://doi.org/10.1007/s12517-022-09829-2}}.
+
+\bibitem[Boswell(2000)]{Boswell}
+Boswell, A.F.
+\newblock {Soil Stabilization/Soil Cement: Mark-Lang, Inc.'s Approach}.
+\newblock In Proceedings of the Geo-Denver 2000, Soil-Cement and
+  Other Construction Practices in Geotechnical Engineering,   \hl{Denver, CO, USA, 5--8 August} 2000; pp.
+  26--35.
+\newblock {{https://doi.org/10.1061/40500(283)3}}.
+
+\bibitem[Sharma(2017)]{Sharma2017}
+Sharma, R.K.
+\newblock {Laboratory study on stabilization of clayey soil with cement kiln
+  dust and fiber}.
+\newblock {\em Geotech. Geol. Eng.} {\bf 2017}, {\em
+  35},~2291--2302.
+\newblock {{https://doi.org/10.1007/s10706-017-0245-5}}.
+
+\bibitem[Sahu \em{et~al.}(2017)Sahu, Srivastava, Misra, and
+  Sharma]{Sahuetal2017}
+Sahu, V.; Srivastava, A.; Misra, A.K.; Sharma, A.K.
+\newblock {Stabilization of fly ash and lime sludge composites: Assessment of
+  its performance as base course material}.
+\newblock {\em Arch. Civ. Mech. Eng.} {\bf 2017}, {\em
+  17},~475--485.
+\newblock {{https://doi.org/10.1016/j.acme.2016.12.010}}.
+
+\bibitem[Saffari \em{et~al.}(2017)Saffari, Habibagahi, Nikooee, and
+  Niazi]{Saffari}
+Saffari, R.; Habibagahi, G.; Nikooee, E.; Niazi, A.
+\newblock {Biological Stabilization of a Swelling Fine-Grained Soil: The Role
+  of Microstructural Changes in the Shear Behavior}.
+\newblock {\em Iran. J. Sci. Technol. Trans. Civ. Eng.} {\bf 2017}, {\em 41},~405--414.
+\newblock {{https://doi.org/10.1007/s40996-017-0066-z}}.
+
+\bibitem[Yadav and Tiwari(2019)]{YadavTiwari}
+Yadav, J.S.; Tiwari, S.K.
+\newblock {The impact of end-of-life tires on the mechanical properties of
+  fine-grained soil: A Review}.
+\newblock {\em Environ. Dev. Sustain.} {\bf 2019}, {\em
+  21},~485–568.
+\newblock {{https://doi.org/10.1007/s10668-017-0054-2}}.
+
+\bibitem[Ogila(2021)]{Ogila}
+Ogila, W.A.M.
+\newblock {Effectiveness of fresh cement kiln dust as a soil stabilizer and
+  stabilization mechanism of high swelling clays}.
+\newblock {\em Environ. Earth Sci.} {\bf 2021}, {\em 80},~283.
+\newblock {{https://doi.org/10.1007/s12665-021-09589-4}}.
+
+\bibitem[Kierlik \em{et~al.}(2019)Kierlik, Hanc-Kuczkowska, Męczyński,
+  Matuła, and Dercz]{Kierlik}
+Kierlik, P.; Hanc-Kuczkowska, A.; Męczyński, R.; Matuła, I.; Dercz, G.
+\newblock {Phase Composition of Urban Soils by X-Ray Diffraction and Mössbauer
+  Spectroscopy Analysis}.
+\newblock {\em Arch. Metall. Mater.} {\bf 2019}, {\em
+  64},~1029--1032.
+\newblock {{https://doi.org/10.24425/amm.2019.129491}}.
+
+\bibitem[Wani and Mir(2021)]{Wani}
+Wani, K.M.N.S.; Mir, B.A.
+\newblock {Effect of Microbial Stabilization on the Unconfined Compressive
+  Strength and Bearing Capacity of Weak Soils}.
+\newblock {\em Transp. Infrastruct. Geotechnol.} {\bf 2021}, {\em
+  8},~59--87.
+\newblock {{https://doi.org/10.1007/s40515-020-00110-1}}.
+
+\bibitem[Fakhrabadi \em{et~al.}(2021)Fakhrabadi, Ghadakpour, Choobbasti, and
+  Kutanaei]{Fakhrabadi}
+Fakhrabadi, A.; Ghadakpour, M.; Choobbasti, A.J.; Kutanaei, S.S.
+\newblock {Evaluating the durability, microstructure and mechanical properties
+  of a clayey-sandy soil stabilized with copper slag-based geopolymer against
+  wetting-drying cycles}.
+\newblock {\em Bull. Eng. Geol. Environ.} {\bf 2021},
+  {\em 80},~5031--5051.
+\newblock {{https://doi.org/10.1007/s10064-021-02228-z}}.
+
+\bibitem[Sharma \em{et~al.}(2011)Sharma, Khandelwal, and N.Singh]{Sharma2011}
+Sharma, P.K.; Khandelwal, M.; N.Singh, T.
+\newblock {A correlation between Schmidt hammer rebound numbers with impact
+  strength index, slake durability index and P-wave velocity.}
+\newblock {\em Int. J. Earth Sci. (GR Geol. Rundschau)} {\bf 2011}, {\em 100},~189--195.
+\newblock {{https://doi.org/10.1007/s00531-009-0506-5}}.
+
+\bibitem[Montgomery(1996)]{Montgomery}
+Montgomery, D.C.
+\newblock {\em Design and Analysis of Experiments}, 7th ed.; Wiley: Hoboken, NJ, USA,  1996.
+
+\bibitem[Myers and Montgomery(1995)]{MyersMontgomery}
+Myers, R.H.; Montgomery, D.C.
+\newblock {\em Response Surface Methodology}; Wiley: Hoboken, NJ, USA, 1995.
+
+\bibitem[{Swedish Institute for Standards}(2003)]{SIS2003}
+\emph{SS-EN 13286-46};
+\newblock Unbound and Hydraulically Bound Mixtures---Part 46: Test Method for
+  the Determination of the Moisture Condition Value. {Swedish Institute for Standards}: Stockholm, Sweden, 2003.
+
+
+\bibitem[{British Standards}(2022)]{BIS}
+\emph{BS1377};
+\newblock Methods of Test for Soils for Civil Engineering Purposes.
+  Moisture Condition Value (MCV) to BS1377 Part 4/5.  {British Standards}: London, UK, 2022.
+%\newblock online,  2022.
+
+\end{thebibliography}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{adjustwidth}
+\end{document}
+
